@@ -64,7 +64,7 @@ namespace FIX42
   class MarketDataRequestReject; 
   class QuoteCancel; 
   class QuoteStatusRequest; 
-  class QuoteAcknowledgement; 
+  class MassQuoteAcknowledgement; 
   class SecurityDefinitionRequest; 
   class SecurityDefinition; 
   class SecurityStatusRequest; 
@@ -153,7 +153,7 @@ namespace FIX42
     { throw FIX::UnsupportedMessageType(); }
   virtual void onMessage( const QuoteStatusRequest&, const FIX::SessionID& ) 
     { throw FIX::UnsupportedMessageType(); }
-  virtual void onMessage( const QuoteAcknowledgement&, const FIX::SessionID& ) 
+  virtual void onMessage( const MassQuoteAcknowledgement&, const FIX::SessionID& ) 
     { throw FIX::UnsupportedMessageType(); }
   virtual void onMessage( const SecurityDefinitionRequest&, const FIX::SessionID& ) 
     { throw FIX::UnsupportedMessageType(); }
@@ -211,7 +211,7 @@ namespace FIX42
  virtual void onMessage( MarketDataRequestReject&, const FIX::SessionID& ) {} 
  virtual void onMessage( QuoteCancel&, const FIX::SessionID& ) {} 
  virtual void onMessage( QuoteStatusRequest&, const FIX::SessionID& ) {} 
- virtual void onMessage( QuoteAcknowledgement&, const FIX::SessionID& ) {} 
+ virtual void onMessage( MassQuoteAcknowledgement&, const FIX::SessionID& ) {} 
  virtual void onMessage( SecurityDefinitionRequest&, const FIX::SessionID& ) {} 
  virtual void onMessage( SecurityDefinition&, const FIX::SessionID& ) {} 
  virtual void onMessage( SecurityStatusRequest&, const FIX::SessionID& ) {} 
@@ -334,7 +334,7 @@ public:
       onMessage( (const QuoteStatusRequest&)message, sessionID );
     else
     if( msgTypeValue == "b" )
-      onMessage( (const QuoteAcknowledgement&)message, sessionID );
+      onMessage( (const MassQuoteAcknowledgement&)message, sessionID );
     else
     if( msgTypeValue == "c" )
       onMessage( (const SecurityDefinitionRequest&)message, sessionID );
@@ -481,7 +481,7 @@ void crack( Message& message,
       onMessage( (QuoteStatusRequest&)message, sessionID );
     else
     if( msgTypeValue == "b" )
-      onMessage( (QuoteAcknowledgement&)message, sessionID );
+      onMessage( (MassQuoteAcknowledgement&)message, sessionID );
     else
     if( msgTypeValue == "c" )
       onMessage( (SecurityDefinitionRequest&)message, sessionID );

@@ -3626,8 +3626,8 @@ module Quickfix
 		end
 	end
 
-	class QuoteAckStatus < Quickfix::IntField
-		def QuoteAckStatus.field
+	class QuoteStatus < Quickfix::IntField
+		def QuoteStatus.field
 			return 297
 		end
 		def initialize(data = nil)
@@ -6040,19 +6040,6 @@ module Quickfix
 				super(260)
 			else
 				super(260, data)
-			end
-		end
-	end
-
-	class QuoteStatus < Quickfix::IntField
-		def QuoteStatus.field
-			return 297
-		end
-		def initialize(data = nil)
-			if( data == nil )
-				super(297)
-			else
-				super(297, data)
 			end
 		end
 	end
@@ -19846,6 +19833,71 @@ module Quickfix
 				super(1617)
 			else
 				super(1617, data)
+			end
+		end
+	end
+
+	class EncodedRejectTextLen < Quickfix::IntField
+		def EncodedRejectTextLen.field
+			return 1664
+		end
+		def initialize(data = nil)
+			if( data == nil )
+				super(1664)
+			else
+				super(1664, data)
+			end
+		end
+	end
+
+	class EncodedRejectText < Quickfix::StringField
+		def EncodedRejectText.field
+			return 1665
+		end
+		def initialize(data = nil)
+			if( data == nil )
+				super(1665)
+			else
+				super(1665, data)
+			end
+		end
+	end
+
+	class SecondaryQuoteID < Quickfix::StringField
+		def SecondaryQuoteID.field
+			return 1751
+		end
+		def initialize(data = nil)
+			if( data == nil )
+				super(1751)
+			else
+				super(1751, data)
+			end
+		end
+	end
+
+	class QuoteAckStatus < Quickfix::IntField
+		def QuoteAckStatus.field
+			return 1865
+		end
+		def initialize(data = nil)
+			if( data == nil )
+				super(1865)
+			else
+				super(1865, data)
+			end
+		end
+	end
+
+	class PartyRoleQualifier < Quickfix::IntField
+		def PartyRoleQualifier.field
+			return 2376
+		end
+		def initialize(data = nil)
+			if( data == nil )
+				super(2376)
+			else
+				super(2376, data)
 			end
 		end
 	end

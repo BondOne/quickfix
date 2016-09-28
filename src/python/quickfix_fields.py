@@ -1953,7 +1953,7 @@ class NoQuoteSets(quickfix.IntField):
 		else:
 			quickfix.IntField.__init__(self, 296, data)
 
-class QuoteAckStatus(quickfix.IntField):
+class QuoteStatus(quickfix.IntField):
 	def __init__(self, data = None):
 		if data == None:
 			quickfix.IntField.__init__(self, 297)
@@ -3254,13 +3254,6 @@ class BasisFeaturePrice(quickfix.DoubleField):
 			quickfix.DoubleField.__init__(self, 260)
 		else:
 			quickfix.DoubleField.__init__(self, 260, data)
-
-class QuoteStatus(quickfix.IntField):
-	def __init__(self, data = None):
-		if data == None:
-			quickfix.IntField.__init__(self, 297)
-		else:
-			quickfix.IntField.__init__(self, 297, data)
 
 class UnderlyingSecurityIDSource(quickfix.StringField):
 	def __init__(self, data = None):
@@ -10688,4 +10681,39 @@ class StreamAsgnType(quickfix.IntField):
 			quickfix.IntField.__init__(self, 1617)
 		else:
 			quickfix.IntField.__init__(self, 1617, data)
+
+class EncodedRejectTextLen(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 1664)
+		else:
+			quickfix.IntField.__init__(self, 1664, data)
+
+class EncodedRejectText(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1665)
+		else:
+			quickfix.StringField.__init__(self, 1665, data)
+
+class SecondaryQuoteID(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1751)
+		else:
+			quickfix.StringField.__init__(self, 1751, data)
+
+class QuoteAckStatus(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 1865)
+		else:
+			quickfix.IntField.__init__(self, 1865, data)
+
+class PartyRoleQualifier(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 2376)
+		else:
+			quickfix.IntField.__init__(self, 2376, data)
 

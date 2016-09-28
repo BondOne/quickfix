@@ -286,7 +286,7 @@ namespace FIX
   DEFINE_QTY(DefOfferSize);
   DEFINE_NUMINGROUP(NoQuoteEntries);
   DEFINE_NUMINGROUP(NoQuoteSets);
-  DEFINE_INT(QuoteAckStatus);
+  DEFINE_INT(QuoteStatus);
   DEFINE_INT(QuoteCancelType);
   DEFINE_STRING(QuoteEntryID);
   DEFINE_INT(QuoteRejectReason);
@@ -472,7 +472,6 @@ namespace FIX
   DEFINE_BOOLEAN(TradedFlatSwitch);
   DEFINE_LOCALMKTDATE(BasisFeatureDate);
   DEFINE_PRICE(BasisFeaturePrice);
-  DEFINE_INT(QuoteStatus);
   DEFINE_STRING(UnderlyingSecurityIDSource);
   DEFINE_CHAR(PartyIDSource);
   DEFINE_STRING(PartyID);
@@ -1534,5 +1533,10 @@ namespace FIX
   DEFINE_INT(StreamAsgnAckType);
   DEFINE_UTCTIMESTAMP(RelSymTransactTime);
   DEFINE_INT(StreamAsgnType);
+  DEFINE_LENGTH(EncodedRejectTextLen);
+  DEFINE_DATA(EncodedRejectText);
+  DEFINE_STRING(SecondaryQuoteID);
+  DEFINE_INT(QuoteAckStatus);
+  DEFINE_INT(PartyRoleQualifier);
 }
 #endif //FIX_FIELDS_H

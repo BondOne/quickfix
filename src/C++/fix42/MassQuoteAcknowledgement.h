@@ -1,30 +1,30 @@
-#ifndef FIX42_QUOTEACKNOWLEDGEMENT_H
-#define FIX42_QUOTEACKNOWLEDGEMENT_H
+#ifndef FIX42_MASSQUOTEACKNOWLEDGEMENT_H
+#define FIX42_MASSQUOTEACKNOWLEDGEMENT_H
 
 #include "Message.h"
 
 namespace FIX42
 {
 
-  class QuoteAcknowledgement : public Message
+  class MassQuoteAcknowledgement : public Message
   {
   public:
-    QuoteAcknowledgement() : Message(MsgType()) {}
-    QuoteAcknowledgement(const FIX::Message& m) : Message(m) {}
-    QuoteAcknowledgement(const Message& m) : Message(m) {}
-    QuoteAcknowledgement(const QuoteAcknowledgement& m) : Message(m) {}
+    MassQuoteAcknowledgement() : Message(MsgType()) {}
+    MassQuoteAcknowledgement(const FIX::Message& m) : Message(m) {}
+    MassQuoteAcknowledgement(const Message& m) : Message(m) {}
+    MassQuoteAcknowledgement(const MassQuoteAcknowledgement& m) : Message(m) {}
     static FIX::MsgType MsgType() { return FIX::MsgType("b"); }
 
-    QuoteAcknowledgement(
-      const FIX::QuoteAckStatus& aQuoteAckStatus )
+    MassQuoteAcknowledgement(
+      const FIX::QuoteStatus& aQuoteStatus )
     : Message(MsgType())
     {
-      set(aQuoteAckStatus);
+      set(aQuoteStatus);
     }
 
     FIELD_SET(*this, FIX::QuoteReqID);
     FIELD_SET(*this, FIX::QuoteID);
-    FIELD_SET(*this, FIX::QuoteAckStatus);
+    FIELD_SET(*this, FIX::QuoteStatus);
     FIELD_SET(*this, FIX::QuoteRejectReason);
     FIELD_SET(*this, FIX::QuoteResponseLevel);
     FIELD_SET(*this, FIX::TradingSessionID);

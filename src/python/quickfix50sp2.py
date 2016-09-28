@@ -13,12 +13,13 @@ class IOI(Message):
 
 	class NoPartyIDs(fix.Group):
 		def __init__(self):
-			order = fix.IntArray(5)
+			order = fix.IntArray(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			fix.Group.__init__(self, 453, 448, order)
 
 		class NoPartySubIDs(fix.Group):
@@ -340,12 +341,13 @@ class ExecutionReport(Message):
 
 	class NoPartyIDs(fix.Group):
 		def __init__(self):
-			order = fix.IntArray(5)
+			order = fix.IntArray(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			fix.Group.__init__(self, 453, 448, order)
 
 		class NoPartySubIDs(fix.Group):
@@ -1198,12 +1200,13 @@ class NewOrderSingle(Message):
 
 	class NoPartyIDs(fix.Group):
 		def __init__(self):
-			order = fix.IntArray(5)
+			order = fix.IntArray(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			fix.Group.__init__(self, 453, 448, order)
 
 		class NoPartySubIDs(fix.Group):
@@ -1608,12 +1611,13 @@ class NewOrderList(Message):
 
 		class NoPartyIDs(fix.Group):
 			def __init__(self):
-				order = fix.IntArray(5)
+				order = fix.IntArray(6)
 				order[0] = 448
 				order[1] = 447
 				order[2] = 452
-				order[3] = 802
-				order[4] = 0
+				order[3] = 2376
+				order[4] = 802
+				order[5] = 0
 				fix.Group.__init__(self, 453, 448, order)
 
 			class NoPartySubIDs(fix.Group):
@@ -1761,12 +1765,13 @@ class OrderCancelRequest(Message):
 
 	class NoPartyIDs(fix.Group):
 		def __init__(self):
-			order = fix.IntArray(5)
+			order = fix.IntArray(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			fix.Group.__init__(self, 453, 448, order)
 
 		class NoPartySubIDs(fix.Group):
@@ -1859,12 +1864,13 @@ class OrderCancelReplaceRequest(Message):
 
 	class NoPartyIDs(fix.Group):
 		def __init__(self):
-			order = fix.IntArray(5)
+			order = fix.IntArray(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			fix.Group.__init__(self, 453, 448, order)
 
 		class NoPartySubIDs(fix.Group):
@@ -2016,12 +2022,13 @@ class OrderStatusRequest(Message):
 
 	class NoPartyIDs(fix.Group):
 		def __init__(self):
-			order = fix.IntArray(5)
+			order = fix.IntArray(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			fix.Group.__init__(self, 453, 448, order)
 
 		class NoPartySubIDs(fix.Group):
@@ -2294,12 +2301,13 @@ class AllocationInstruction(Message):
 
 	class NoPartyIDs(fix.Group):
 		def __init__(self):
-			order = fix.IntArray(5)
+			order = fix.IntArray(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			fix.Group.__init__(self, 453, 448, order)
 
 		class NoPartySubIDs(fix.Group):
@@ -2424,12 +2432,13 @@ class ListCancelRequest(Message):
 
 	class NoPartyIDs(fix.Group):
 		def __init__(self):
-			order = fix.IntArray(5)
+			order = fix.IntArray(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			fix.Group.__init__(self, 453, 448, order)
 
 		class NoPartySubIDs(fix.Group):
@@ -2481,12 +2490,13 @@ class AllocationInstructionAck(Message):
 
 	class NoPartyIDs(fix.Group):
 		def __init__(self):
-			order = fix.IntArray(5)
+			order = fix.IntArray(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			fix.Group.__init__(self, 453, 448, order)
 
 		class NoPartySubIDs(fix.Group):
@@ -3032,12 +3042,13 @@ class QuoteRequest(Message):
 
 		class NoPartyIDs(fix.Group):
 			def __init__(self):
-				order = fix.IntArray(5)
+				order = fix.IntArray(6)
 				order[0] = 448
 				order[1] = 447
 				order[2] = 452
-				order[3] = 802
-				order[4] = 0
+				order[3] = 2376
+				order[4] = 802
+				order[5] = 0
 				fix.Group.__init__(self, 453, 448, order)
 
 			class NoPartySubIDs(fix.Group):
@@ -3071,12 +3082,13 @@ class Quote(Message):
 
 	class NoPartyIDs(fix.Group):
 		def __init__(self):
-			order = fix.IntArray(5)
+			order = fix.IntArray(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			fix.Group.__init__(self, 453, 448, order)
 
 		class NoPartySubIDs(fix.Group):
@@ -3319,12 +3331,13 @@ class SettlementInstructions(Message):
 
 		class NoPartyIDs(fix.Group):
 			def __init__(self):
-				order = fix.IntArray(5)
+				order = fix.IntArray(6)
 				order[0] = 448
 				order[1] = 447
 				order[2] = 452
-				order[3] = 802
-				order[4] = 0
+				order[3] = 2376
+				order[4] = 802
+				order[5] = 0
 				fix.Group.__init__(self, 453, 448, order)
 
 			class NoPartySubIDs(fix.Group):
@@ -3342,12 +3355,13 @@ class MarketDataRequest(Message):
 
 	class NoPartyIDs(fix.Group):
 		def __init__(self):
-			order = fix.IntArray(5)
+			order = fix.IntArray(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			fix.Group.__init__(self, 453, 448, order)
 
 		class NoPartySubIDs(fix.Group):
@@ -3829,12 +3843,13 @@ class MarketDataSnapshotFullRefresh(Message):
 
 		class NoPartyIDs(fix.Group):
 			def __init__(self):
-				order = fix.IntArray(5)
+				order = fix.IntArray(6)
 				order[0] = 448
 				order[1] = 447
 				order[2] = 452
-				order[3] = 802
-				order[4] = 0
+				order[3] = 2376
+				order[4] = 802
+				order[5] = 0
 				fix.Group.__init__(self, 453, 448, order)
 
 			class NoPartySubIDs(fix.Group):
@@ -4194,12 +4209,13 @@ class MarketDataIncrementalRefresh(Message):
 
 		class NoPartyIDs(fix.Group):
 			def __init__(self):
-				order = fix.IntArray(5)
+				order = fix.IntArray(6)
 				order[0] = 448
 				order[1] = 447
 				order[2] = 452
-				order[3] = 802
-				order[4] = 0
+				order[3] = 2376
+				order[4] = 802
+				order[5] = 0
 				fix.Group.__init__(self, 453, 448, order)
 
 			class NoPartySubIDs(fix.Group):
@@ -4234,12 +4250,13 @@ class MarketDataRequestReject(Message):
 
 	class NoPartyIDs(fix.Group):
 		def __init__(self):
-			order = fix.IntArray(5)
+			order = fix.IntArray(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			fix.Group.__init__(self, 453, 448, order)
 
 		class NoPartySubIDs(fix.Group):
@@ -4264,12 +4281,13 @@ class QuoteCancel(Message):
 
 	class NoPartyIDs(fix.Group):
 		def __init__(self):
-			order = fix.IntArray(5)
+			order = fix.IntArray(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			fix.Group.__init__(self, 453, 448, order)
 
 		class NoPartySubIDs(fix.Group):
@@ -4660,12 +4678,13 @@ class QuoteStatusRequest(Message):
 
 	class NoPartyIDs(fix.Group):
 		def __init__(self):
-			order = fix.IntArray(5)
+			order = fix.IntArray(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			fix.Group.__init__(self, 453, 448, order)
 
 		class NoPartySubIDs(fix.Group):
@@ -4692,12 +4711,13 @@ class MassQuoteAcknowledgement(Message):
 
 	class NoPartyIDs(fix.Group):
 		def __init__(self):
-			order = fix.IntArray(5)
+			order = fix.IntArray(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			fix.Group.__init__(self, 453, 448, order)
 
 		class NoPartySubIDs(fix.Group):
@@ -5593,12 +5613,13 @@ class MassQuote(Message):
 
 	class NoPartyIDs(fix.Group):
 		def __init__(self):
-			order = fix.IntArray(5)
+			order = fix.IntArray(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			fix.Group.__init__(self, 453, 448, order)
 
 		class NoPartySubIDs(fix.Group):
@@ -6117,12 +6138,13 @@ class RegistrationInstructions(Message):
 
 	class NoPartyIDs(fix.Group):
 		def __init__(self):
-			order = fix.IntArray(5)
+			order = fix.IntArray(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			fix.Group.__init__(self, 453, 448, order)
 
 		class NoPartySubIDs(fix.Group):
@@ -6186,12 +6208,13 @@ class RegistrationInstructionsResponse(Message):
 
 	class NoPartyIDs(fix.Group):
 		def __init__(self):
-			order = fix.IntArray(5)
+			order = fix.IntArray(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			fix.Group.__init__(self, 453, 448, order)
 
 		class NoPartySubIDs(fix.Group):
@@ -6209,12 +6232,13 @@ class OrderMassCancelRequest(Message):
 
 	class NoPartyIDs(fix.Group):
 		def __init__(self):
-			order = fix.IntArray(5)
+			order = fix.IntArray(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			fix.Group.__init__(self, 453, 448, order)
 
 		class NoPartySubIDs(fix.Group):
@@ -6258,12 +6282,13 @@ class OrderMassCancelReport(Message):
 
 	class NoPartyIDs(fix.Group):
 		def __init__(self):
-			order = fix.IntArray(5)
+			order = fix.IntArray(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			fix.Group.__init__(self, 453, 448, order)
 
 		class NoPartySubIDs(fix.Group):
@@ -6357,12 +6382,13 @@ class NewOrderCross(Message):
 
 		class NoPartyIDs(fix.Group):
 			def __init__(self):
-				order = fix.IntArray(5)
+				order = fix.IntArray(6)
 				order[0] = 448
 				order[1] = 447
 				order[2] = 452
-				order[3] = 802
-				order[4] = 0
+				order[3] = 2376
+				order[4] = 802
+				order[5] = 0
 				fix.Group.__init__(self, 453, 448, order)
 
 			class NoPartySubIDs(fix.Group):
@@ -6635,12 +6661,13 @@ class CrossOrderCancelReplaceRequest(Message):
 
 		class NoPartyIDs(fix.Group):
 			def __init__(self):
-				order = fix.IntArray(5)
+				order = fix.IntArray(6)
 				order[0] = 448
 				order[1] = 447
 				order[2] = 452
-				order[3] = 802
-				order[4] = 0
+				order[3] = 2376
+				order[4] = 802
+				order[5] = 0
 				fix.Group.__init__(self, 453, 448, order)
 
 			class NoPartySubIDs(fix.Group):
@@ -6888,12 +6915,13 @@ class CrossOrderCancelRequest(Message):
 
 		class NoPartyIDs(fix.Group):
 			def __init__(self):
-				order = fix.IntArray(5)
+				order = fix.IntArray(6)
 				order[0] = 448
 				order[1] = 447
 				order[2] = 452
-				order[3] = 802
-				order[4] = 0
+				order[3] = 2376
+				order[4] = 802
+				order[5] = 0
 				fix.Group.__init__(self, 453, 448, order)
 
 			class NoPartySubIDs(fix.Group):
@@ -7678,12 +7706,13 @@ class NewOrderMultileg(Message):
 
 	class NoPartyIDs(fix.Group):
 		def __init__(self):
-			order = fix.IntArray(5)
+			order = fix.IntArray(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			fix.Group.__init__(self, 453, 448, order)
 
 		class NoPartySubIDs(fix.Group):
@@ -7954,12 +7983,13 @@ class MultilegOrderCancelReplace(Message):
 
 	class NoPartyIDs(fix.Group):
 		def __init__(self):
-			order = fix.IntArray(5)
+			order = fix.IntArray(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			fix.Group.__init__(self, 453, 448, order)
 
 		class NoPartySubIDs(fix.Group):
@@ -8230,12 +8260,13 @@ class TradeCaptureReportRequest(Message):
 
 	class NoPartyIDs(fix.Group):
 		def __init__(self):
-			order = fix.IntArray(5)
+			order = fix.IntArray(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			fix.Group.__init__(self, 453, 448, order)
 
 		class NoPartySubIDs(fix.Group):
@@ -8733,12 +8764,13 @@ class TradeCaptureReport(Message):
 
 		class NoPartyIDs(fix.Group):
 			def __init__(self):
-				order = fix.IntArray(5)
+				order = fix.IntArray(6)
 				order[0] = 448
 				order[1] = 447
 				order[2] = 452
-				order[3] = 802
-				order[4] = 0
+				order[3] = 2376
+				order[4] = 802
+				order[5] = 0
 				fix.Group.__init__(self, 453, 448, order)
 
 			class NoPartySubIDs(fix.Group):
@@ -8867,12 +8899,13 @@ class OrderMassStatusRequest(Message):
 
 	class NoPartyIDs(fix.Group):
 		def __init__(self):
-			order = fix.IntArray(5)
+			order = fix.IntArray(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			fix.Group.__init__(self, 453, 448, order)
 
 		class NoPartySubIDs(fix.Group):
@@ -9247,12 +9280,13 @@ class QuoteRequestReject(Message):
 
 		class NoPartyIDs(fix.Group):
 			def __init__(self):
-				order = fix.IntArray(5)
+				order = fix.IntArray(6)
 				order[0] = 448
 				order[1] = 447
 				order[2] = 452
-				order[3] = 802
-				order[4] = 0
+				order[3] = 2376
+				order[4] = 802
+				order[5] = 0
 				fix.Group.__init__(self, 453, 448, order)
 
 			class NoPartySubIDs(fix.Group):
@@ -9270,12 +9304,13 @@ class RFQRequest(Message):
 
 	class NoPartyIDs(fix.Group):
 		def __init__(self):
-			order = fix.IntArray(5)
+			order = fix.IntArray(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			fix.Group.__init__(self, 453, 448, order)
 
 		class NoPartySubIDs(fix.Group):
@@ -9520,12 +9555,13 @@ class QuoteStatusReport(Message):
 
 	class NoPartyIDs(fix.Group):
 		def __init__(self):
-			order = fix.IntArray(5)
+			order = fix.IntArray(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			fix.Group.__init__(self, 453, 448, order)
 
 		class NoPartySubIDs(fix.Group):
@@ -9740,12 +9776,13 @@ class QuoteResponse(Message):
 
 	class NoPartyIDs(fix.Group):
 		def __init__(self):
-			order = fix.IntArray(5)
+			order = fix.IntArray(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			fix.Group.__init__(self, 453, 448, order)
 
 		class NoPartySubIDs(fix.Group):
@@ -9948,12 +9985,13 @@ class Confirmation(Message):
 
 	class NoPartyIDs(fix.Group):
 		def __init__(self):
-			order = fix.IntArray(5)
+			order = fix.IntArray(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			fix.Group.__init__(self, 453, 448, order)
 
 		class NoPartySubIDs(fix.Group):
@@ -10176,12 +10214,13 @@ class PositionMaintenanceRequest(Message):
 
 	class NoPartyIDs(fix.Group):
 		def __init__(self):
-			order = fix.IntArray(5)
+			order = fix.IntArray(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			fix.Group.__init__(self, 453, 448, order)
 
 		class NoPartySubIDs(fix.Group):
@@ -10379,12 +10418,13 @@ class PositionMaintenanceReport(Message):
 
 	class NoPartyIDs(fix.Group):
 		def __init__(self):
-			order = fix.IntArray(5)
+			order = fix.IntArray(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			fix.Group.__init__(self, 453, 448, order)
 
 		class NoPartySubIDs(fix.Group):
@@ -10582,12 +10622,13 @@ class RequestForPositions(Message):
 
 	class NoPartyIDs(fix.Group):
 		def __init__(self):
-			order = fix.IntArray(5)
+			order = fix.IntArray(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			fix.Group.__init__(self, 453, 448, order)
 
 		class NoPartySubIDs(fix.Group):
@@ -10746,12 +10787,13 @@ class RequestForPositionsAck(Message):
 
 	class NoPartyIDs(fix.Group):
 		def __init__(self):
-			order = fix.IntArray(5)
+			order = fix.IntArray(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			fix.Group.__init__(self, 453, 448, order)
 
 		class NoPartySubIDs(fix.Group):
@@ -10902,12 +10944,13 @@ class PositionReport(Message):
 
 	class NoPartyIDs(fix.Group):
 		def __init__(self):
-			order = fix.IntArray(5)
+			order = fix.IntArray(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			fix.Group.__init__(self, 453, 448, order)
 
 		class NoPartySubIDs(fix.Group):
@@ -11590,12 +11633,13 @@ class TradeCaptureReportAck(Message):
 
 		class NoPartyIDs(fix.Group):
 			def __init__(self):
-				order = fix.IntArray(5)
+				order = fix.IntArray(6)
 				order[0] = 448
 				order[1] = 447
 				order[2] = 452
-				order[3] = 802
-				order[4] = 0
+				order[3] = 2376
+				order[4] = 802
+				order[5] = 0
 				fix.Group.__init__(self, 453, 448, order)
 
 			class NoPartySubIDs(fix.Group):
@@ -11896,12 +11940,13 @@ class AllocationReport(Message):
 
 	class NoPartyIDs(fix.Group):
 		def __init__(self):
-			order = fix.IntArray(5)
+			order = fix.IntArray(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			fix.Group.__init__(self, 453, 448, order)
 
 		class NoPartySubIDs(fix.Group):
@@ -12026,12 +12071,13 @@ class AllocationReportAck(Message):
 
 	class NoPartyIDs(fix.Group):
 		def __init__(self):
-			order = fix.IntArray(5)
+			order = fix.IntArray(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			fix.Group.__init__(self, 453, 448, order)
 
 		class NoPartySubIDs(fix.Group):
@@ -12092,12 +12138,13 @@ class SettlementInstructionRequest(Message):
 
 	class NoPartyIDs(fix.Group):
 		def __init__(self):
-			order = fix.IntArray(5)
+			order = fix.IntArray(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			fix.Group.__init__(self, 453, 448, order)
 
 		class NoPartySubIDs(fix.Group):
@@ -12115,12 +12162,13 @@ class AssignmentReport(Message):
 
 	class NoPartyIDs(fix.Group):
 		def __init__(self):
-			order = fix.IntArray(5)
+			order = fix.IntArray(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			fix.Group.__init__(self, 453, 448, order)
 
 		class NoPartySubIDs(fix.Group):
@@ -12310,12 +12358,13 @@ class CollateralRequest(Message):
 
 	class NoPartyIDs(fix.Group):
 		def __init__(self):
-			order = fix.IntArray(5)
+			order = fix.IntArray(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			fix.Group.__init__(self, 453, 448, order)
 
 		class NoPartySubIDs(fix.Group):
@@ -12512,12 +12561,13 @@ class CollateralAssignment(Message):
 
 	class NoPartyIDs(fix.Group):
 		def __init__(self):
-			order = fix.IntArray(5)
+			order = fix.IntArray(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			fix.Group.__init__(self, 453, 448, order)
 
 		class NoPartySubIDs(fix.Group):
@@ -12714,12 +12764,13 @@ class CollateralResponse(Message):
 
 	class NoPartyIDs(fix.Group):
 		def __init__(self):
-			order = fix.IntArray(5)
+			order = fix.IntArray(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			fix.Group.__init__(self, 453, 448, order)
 
 		class NoPartySubIDs(fix.Group):
@@ -12916,12 +12967,13 @@ class CollateralReport(Message):
 
 	class NoPartyIDs(fix.Group):
 		def __init__(self):
-			order = fix.IntArray(5)
+			order = fix.IntArray(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			fix.Group.__init__(self, 453, 448, order)
 
 		class NoPartySubIDs(fix.Group):
@@ -13124,12 +13176,13 @@ class CollateralInquiry(Message):
 
 	class NoPartyIDs(fix.Group):
 		def __init__(self):
-			order = fix.IntArray(5)
+			order = fix.IntArray(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			fix.Group.__init__(self, 453, 448, order)
 
 		class NoPartySubIDs(fix.Group):
@@ -13364,12 +13417,13 @@ class CollateralInquiryAck(Message):
 
 	class NoPartyIDs(fix.Group):
 		def __init__(self):
-			order = fix.IntArray(5)
+			order = fix.IntArray(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			fix.Group.__init__(self, 453, 448, order)
 
 		class NoPartySubIDs(fix.Group):
@@ -13573,12 +13627,13 @@ class ContraryIntentionReport(Message):
 
 	class NoPartyIDs(fix.Group):
 		def __init__(self):
-			order = fix.IntArray(5)
+			order = fix.IntArray(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			fix.Group.__init__(self, 453, 448, order)
 
 		class NoPartySubIDs(fix.Group):
@@ -14166,12 +14221,13 @@ class AdjustedPositionReport(Message):
 
 	class NoPartyIDs(fix.Group):
 		def __init__(self):
-			order = fix.IntArray(5)
+			order = fix.IntArray(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			fix.Group.__init__(self, 453, 448, order)
 
 		class NoPartySubIDs(fix.Group):
@@ -14486,12 +14542,13 @@ class AllocationInstructionAlert(Message):
 
 	class NoPartyIDs(fix.Group):
 		def __init__(self):
-			order = fix.IntArray(5)
+			order = fix.IntArray(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			fix.Group.__init__(self, 453, 448, order)
 
 		class NoPartySubIDs(fix.Group):
@@ -14885,12 +14942,13 @@ class SettlementObligationReport(Message):
 
 		class NoPartyIDs(fix.Group):
 			def __init__(self):
-				order = fix.IntArray(5)
+				order = fix.IntArray(6)
 				order[0] = 448
 				order[1] = 447
 				order[2] = 452
-				order[3] = 802
-				order[4] = 0
+				order[3] = 2376
+				order[4] = 802
+				order[5] = 0
 				fix.Group.__init__(self, 453, 448, order)
 
 			class NoPartySubIDs(fix.Group):
@@ -15217,12 +15275,13 @@ class ApplicationMessageRequest(Message):
 
 	class NoPartyIDs(fix.Group):
 		def __init__(self):
-			order = fix.IntArray(5)
+			order = fix.IntArray(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			fix.Group.__init__(self, 453, 448, order)
 
 		class NoPartySubIDs(fix.Group):
@@ -15271,12 +15330,13 @@ class ApplicationMessageRequestAck(Message):
 
 	class NoPartyIDs(fix.Group):
 		def __init__(self):
-			order = fix.IntArray(5)
+			order = fix.IntArray(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			fix.Group.__init__(self, 453, 448, order)
 
 		class NoPartySubIDs(fix.Group):
@@ -15325,12 +15385,13 @@ class OrderMassActionReport(Message):
 
 	class NoPartyIDs(fix.Group):
 		def __init__(self):
-			order = fix.IntArray(5)
+			order = fix.IntArray(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			fix.Group.__init__(self, 453, 448, order)
 
 		class NoPartySubIDs(fix.Group):
@@ -15357,12 +15418,13 @@ class OrderMassActionRequest(Message):
 
 	class NoPartyIDs(fix.Group):
 		def __init__(self):
-			order = fix.IntArray(5)
+			order = fix.IntArray(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			fix.Group.__init__(self, 453, 448, order)
 
 		class NoPartySubIDs(fix.Group):
@@ -15402,12 +15464,13 @@ class StreamAssignmentRequest(Message):
 
 		class NoPartyIDs(fix.Group):
 			def __init__(self):
-				order = fix.IntArray(5)
+				order = fix.IntArray(6)
 				order[0] = 448
 				order[1] = 447
 				order[2] = 452
-				order[3] = 802
-				order[4] = 0
+				order[3] = 2376
+				order[4] = 802
+				order[5] = 0
 				fix.Group.__init__(self, 453, 448, order)
 
 			class NoPartySubIDs(fix.Group):
@@ -15523,12 +15586,13 @@ class StreamAssignmentReport(Message):
 
 		class NoPartyIDs(fix.Group):
 			def __init__(self):
-				order = fix.IntArray(5)
+				order = fix.IntArray(6)
 				order[0] = 448
 				order[1] = 447
 				order[2] = 452
-				order[3] = 802
-				order[4] = 0
+				order[3] = 2376
+				order[4] = 802
+				order[5] = 0
 				fix.Group.__init__(self, 453, 448, order)
 
 			class NoPartySubIDs(fix.Group):
@@ -15637,3 +15701,27 @@ class StreamAssignmentReportACK(Message):
 	def __init__(self):
 		Message.__init__(self)
 		self.getHeader().setField( fix.MsgType("CE") )
+
+class QuoteAcknowledgement(Message):
+	def __init__(self):
+		Message.__init__(self)
+		self.getHeader().setField( fix.MsgType("CW") )
+
+	class NoPartyIDs(fix.Group):
+		def __init__(self):
+			order = fix.IntArray(6)
+			order[0] = 448
+			order[1] = 447
+			order[2] = 452
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
+			fix.Group.__init__(self, 453, 448, order)
+
+		class NoPartySubIDs(fix.Group):
+			def __init__(self):
+				order = fix.IntArray(3)
+				order[0] = 523
+				order[1] = 803
+				order[2] = 0
+				fix.Group.__init__(self, 802, 523, order)

@@ -812,7 +812,7 @@ class QuoteStatusRequest < Message
 	end
 end
 
-class QuoteAcknowledgement < Message
+class MassQuoteAcknowledgement < Message
 	def initialize
 		super
 		getHeader().setField( Quickfix::MsgType.new("b") )

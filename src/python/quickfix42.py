@@ -686,7 +686,7 @@ class QuoteStatusRequest(Message):
 		Message.__init__(self)
 		self.getHeader().setField( fix.MsgType("a") )
 
-class QuoteAcknowledgement(Message):
+class MassQuoteAcknowledgement(Message):
 	def __init__(self):
 		Message.__init__(self)
 		self.getHeader().setField( fix.MsgType("b") )

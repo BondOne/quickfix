@@ -16,12 +16,13 @@ class IOI < Message
 
 	class NoPartyIDs < Quickfix::Group
 		def initialize
-			order = Quickfix::IntArray.new(5)
+			order = Quickfix::IntArray.new(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			super(453, 448, order)
 		end
 
@@ -367,12 +368,13 @@ class ExecutionReport < Message
 
 	class NoPartyIDs < Quickfix::Group
 		def initialize
-			order = Quickfix::IntArray.new(5)
+			order = Quickfix::IntArray.new(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			super(453, 448, order)
 		end
 
@@ -1301,12 +1303,13 @@ class NewOrderSingle < Message
 
 	class NoPartyIDs < Quickfix::Group
 		def initialize
-			order = Quickfix::IntArray.new(5)
+			order = Quickfix::IntArray.new(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			super(453, 448, order)
 		end
 
@@ -1738,12 +1741,13 @@ class NewOrderList < Message
 
 		class NoPartyIDs < Quickfix::Group
 			def initialize
-				order = Quickfix::IntArray.new(5)
+				order = Quickfix::IntArray.new(6)
 				order[0] = 448
 				order[1] = 447
 				order[2] = 452
-				order[3] = 802
-				order[4] = 0
+				order[3] = 2376
+				order[4] = 802
+				order[5] = 0
 				super(453, 448, order)
 			end
 
@@ -1912,12 +1916,13 @@ class OrderCancelRequest < Message
 
 	class NoPartyIDs < Quickfix::Group
 		def initialize
-			order = Quickfix::IntArray.new(5)
+			order = Quickfix::IntArray.new(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			super(453, 448, order)
 		end
 
@@ -2018,12 +2023,13 @@ class OrderCancelReplaceRequest < Message
 
 	class NoPartyIDs < Quickfix::Group
 		def initialize
-			order = Quickfix::IntArray.new(5)
+			order = Quickfix::IntArray.new(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			super(453, 448, order)
 		end
 
@@ -2195,12 +2201,13 @@ class OrderStatusRequest < Message
 
 	class NoPartyIDs < Quickfix::Group
 		def initialize
-			order = Quickfix::IntArray.new(5)
+			order = Quickfix::IntArray.new(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			super(453, 448, order)
 		end
 
@@ -2493,12 +2500,13 @@ class AllocationInstruction < Message
 
 	class NoPartyIDs < Quickfix::Group
 		def initialize
-			order = Quickfix::IntArray.new(5)
+			order = Quickfix::IntArray.new(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			super(453, 448, order)
 		end
 
@@ -2645,12 +2653,13 @@ class ListCancelRequest < Message
 
 	class NoPartyIDs < Quickfix::Group
 		def initialize
-			order = Quickfix::IntArray.new(5)
+			order = Quickfix::IntArray.new(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			super(453, 448, order)
 		end
 
@@ -2716,12 +2725,13 @@ class AllocationInstructionAck < Message
 
 	class NoPartyIDs < Quickfix::Group
 		def initialize
-			order = Quickfix::IntArray.new(5)
+			order = Quickfix::IntArray.new(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			super(453, 448, order)
 		end
 
@@ -3304,12 +3314,13 @@ class QuoteRequest < Message
 
 		class NoPartyIDs < Quickfix::Group
 			def initialize
-				order = Quickfix::IntArray.new(5)
+				order = Quickfix::IntArray.new(6)
 				order[0] = 448
 				order[1] = 447
 				order[2] = 452
-				order[3] = 802
-				order[4] = 0
+				order[3] = 2376
+				order[4] = 802
+				order[5] = 0
 				super(453, 448, order)
 			end
 
@@ -3354,12 +3365,13 @@ class Quote < Message
 
 	class NoPartyIDs < Quickfix::Group
 		def initialize
-			order = Quickfix::IntArray.new(5)
+			order = Quickfix::IntArray.new(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			super(453, 448, order)
 		end
 
@@ -3623,12 +3635,13 @@ class SettlementInstructions < Message
 
 		class NoPartyIDs < Quickfix::Group
 			def initialize
-				order = Quickfix::IntArray.new(5)
+				order = Quickfix::IntArray.new(6)
 				order[0] = 448
 				order[1] = 447
 				order[2] = 452
-				order[3] = 802
-				order[4] = 0
+				order[3] = 2376
+				order[4] = 802
+				order[5] = 0
 				super(453, 448, order)
 			end
 
@@ -3653,12 +3666,13 @@ class MarketDataRequest < Message
 
 	class NoPartyIDs < Quickfix::Group
 		def initialize
-			order = Quickfix::IntArray.new(5)
+			order = Quickfix::IntArray.new(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			super(453, 448, order)
 		end
 
@@ -4163,12 +4177,13 @@ class MarketDataSnapshotFullRefresh < Message
 
 		class NoPartyIDs < Quickfix::Group
 			def initialize
-				order = Quickfix::IntArray.new(5)
+				order = Quickfix::IntArray.new(6)
 				order[0] = 448
 				order[1] = 447
 				order[2] = 452
-				order[3] = 802
-				order[4] = 0
+				order[3] = 2376
+				order[4] = 802
+				order[5] = 0
 				super(453, 448, order)
 			end
 
@@ -4548,12 +4563,13 @@ class MarketDataIncrementalRefresh < Message
 
 		class NoPartyIDs < Quickfix::Group
 			def initialize
-				order = Quickfix::IntArray.new(5)
+				order = Quickfix::IntArray.new(6)
 				order[0] = 448
 				order[1] = 447
 				order[2] = 452
-				order[3] = 802
-				order[4] = 0
+				order[3] = 2376
+				order[4] = 802
+				order[5] = 0
 				super(453, 448, order)
 			end
 
@@ -4599,12 +4615,13 @@ class MarketDataRequestReject < Message
 
 	class NoPartyIDs < Quickfix::Group
 		def initialize
-			order = Quickfix::IntArray.new(5)
+			order = Quickfix::IntArray.new(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			super(453, 448, order)
 		end
 
@@ -4637,12 +4654,13 @@ class QuoteCancel < Message
 
 	class NoPartyIDs < Quickfix::Group
 		def initialize
-			order = Quickfix::IntArray.new(5)
+			order = Quickfix::IntArray.new(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			super(453, 448, order)
 		end
 
@@ -5051,12 +5069,13 @@ class QuoteStatusRequest < Message
 
 	class NoPartyIDs < Quickfix::Group
 		def initialize
-			order = Quickfix::IntArray.new(5)
+			order = Quickfix::IntArray.new(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			super(453, 448, order)
 		end
 
@@ -5091,12 +5110,13 @@ class MassQuoteAcknowledgement < Message
 
 	class NoPartyIDs < Quickfix::Group
 		def initialize
-			order = Quickfix::IntArray.new(5)
+			order = Quickfix::IntArray.new(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			super(453, 448, order)
 		end
 
@@ -6044,12 +6064,13 @@ class MassQuote < Message
 
 	class NoPartyIDs < Quickfix::Group
 		def initialize
-			order = Quickfix::IntArray.new(5)
+			order = Quickfix::IntArray.new(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			super(453, 448, order)
 		end
 
@@ -6598,12 +6619,13 @@ class RegistrationInstructions < Message
 
 	class NoPartyIDs < Quickfix::Group
 		def initialize
-			order = Quickfix::IntArray.new(5)
+			order = Quickfix::IntArray.new(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			super(453, 448, order)
 		end
 
@@ -6681,12 +6703,13 @@ class RegistrationInstructionsResponse < Message
 
 	class NoPartyIDs < Quickfix::Group
 		def initialize
-			order = Quickfix::IntArray.new(5)
+			order = Quickfix::IntArray.new(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			super(453, 448, order)
 		end
 
@@ -6710,12 +6733,13 @@ class OrderMassCancelRequest < Message
 
 	class NoPartyIDs < Quickfix::Group
 		def initialize
-			order = Quickfix::IntArray.new(5)
+			order = Quickfix::IntArray.new(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			super(453, 448, order)
 		end
 
@@ -6771,12 +6795,13 @@ class OrderMassCancelReport < Message
 
 	class NoPartyIDs < Quickfix::Group
 		def initialize
-			order = Quickfix::IntArray.new(5)
+			order = Quickfix::IntArray.new(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			super(453, 448, order)
 		end
 
@@ -6883,12 +6908,13 @@ class NewOrderCross < Message
 
 		class NoPartyIDs < Quickfix::Group
 			def initialize
-				order = Quickfix::IntArray.new(5)
+				order = Quickfix::IntArray.new(6)
 				order[0] = 448
 				order[1] = 447
 				order[2] = 452
-				order[3] = 802
-				order[4] = 0
+				order[3] = 2376
+				order[4] = 802
+				order[5] = 0
 				super(453, 448, order)
 			end
 
@@ -7189,12 +7215,13 @@ class CrossOrderCancelReplaceRequest < Message
 
 		class NoPartyIDs < Quickfix::Group
 			def initialize
-				order = Quickfix::IntArray.new(5)
+				order = Quickfix::IntArray.new(6)
 				order[0] = 448
 				order[1] = 447
 				order[2] = 452
-				order[3] = 802
-				order[4] = 0
+				order[3] = 2376
+				order[4] = 802
+				order[5] = 0
 				super(453, 448, order)
 			end
 
@@ -7470,12 +7497,13 @@ class CrossOrderCancelRequest < Message
 
 		class NoPartyIDs < Quickfix::Group
 			def initialize
-				order = Quickfix::IntArray.new(5)
+				order = Quickfix::IntArray.new(6)
 				order[0] = 448
 				order[1] = 447
 				order[2] = 452
-				order[3] = 802
-				order[4] = 0
+				order[3] = 2376
+				order[4] = 802
+				order[5] = 0
 				super(453, 448, order)
 			end
 
@@ -8307,12 +8335,13 @@ class NewOrderMultileg < Message
 
 	class NoPartyIDs < Quickfix::Group
 		def initialize
-			order = Quickfix::IntArray.new(5)
+			order = Quickfix::IntArray.new(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			super(453, 448, order)
 		end
 
@@ -8615,12 +8644,13 @@ class MultilegOrderCancelReplace < Message
 
 	class NoPartyIDs < Quickfix::Group
 		def initialize
-			order = Quickfix::IntArray.new(5)
+			order = Quickfix::IntArray.new(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			super(453, 448, order)
 		end
 
@@ -8923,12 +8953,13 @@ class TradeCaptureReportRequest < Message
 
 	class NoPartyIDs < Quickfix::Group
 		def initialize
-			order = Quickfix::IntArray.new(5)
+			order = Quickfix::IntArray.new(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			super(453, 448, order)
 		end
 
@@ -9459,12 +9490,13 @@ class TradeCaptureReport < Message
 
 		class NoPartyIDs < Quickfix::Group
 			def initialize
-				order = Quickfix::IntArray.new(5)
+				order = Quickfix::IntArray.new(6)
 				order[0] = 448
 				order[1] = 447
 				order[2] = 452
-				order[3] = 802
-				order[4] = 0
+				order[3] = 2376
+				order[4] = 802
+				order[5] = 0
 				super(453, 448, order)
 			end
 
@@ -9624,12 +9656,13 @@ class OrderMassStatusRequest < Message
 
 	class NoPartyIDs < Quickfix::Group
 		def initialize
-			order = Quickfix::IntArray.new(5)
+			order = Quickfix::IntArray.new(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			super(453, 448, order)
 		end
 
@@ -10031,12 +10064,13 @@ class QuoteRequestReject < Message
 
 		class NoPartyIDs < Quickfix::Group
 			def initialize
-				order = Quickfix::IntArray.new(5)
+				order = Quickfix::IntArray.new(6)
 				order[0] = 448
 				order[1] = 447
 				order[2] = 452
-				order[3] = 802
-				order[4] = 0
+				order[3] = 2376
+				order[4] = 802
+				order[5] = 0
 				super(453, 448, order)
 			end
 
@@ -10061,12 +10095,13 @@ class RFQRequest < Message
 
 	class NoPartyIDs < Quickfix::Group
 		def initialize
-			order = Quickfix::IntArray.new(5)
+			order = Quickfix::IntArray.new(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			super(453, 448, order)
 		end
 
@@ -10323,12 +10358,13 @@ class QuoteStatusReport < Message
 
 	class NoPartyIDs < Quickfix::Group
 		def initialize
-			order = Quickfix::IntArray.new(5)
+			order = Quickfix::IntArray.new(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			super(453, 448, order)
 		end
 
@@ -10567,12 +10603,13 @@ class QuoteResponse < Message
 
 	class NoPartyIDs < Quickfix::Group
 		def initialize
-			order = Quickfix::IntArray.new(5)
+			order = Quickfix::IntArray.new(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			super(453, 448, order)
 		end
 
@@ -10793,12 +10830,13 @@ class Confirmation < Message
 
 	class NoPartyIDs < Quickfix::Group
 		def initialize
-			order = Quickfix::IntArray.new(5)
+			order = Quickfix::IntArray.new(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			super(453, 448, order)
 		end
 
@@ -11045,12 +11083,13 @@ class PositionMaintenanceRequest < Message
 
 	class NoPartyIDs < Quickfix::Group
 		def initialize
-			order = Quickfix::IntArray.new(5)
+			order = Quickfix::IntArray.new(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			super(453, 448, order)
 		end
 
@@ -11268,12 +11307,13 @@ class PositionMaintenanceReport < Message
 
 	class NoPartyIDs < Quickfix::Group
 		def initialize
-			order = Quickfix::IntArray.new(5)
+			order = Quickfix::IntArray.new(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			super(453, 448, order)
 		end
 
@@ -11491,12 +11531,13 @@ class RequestForPositions < Message
 
 	class NoPartyIDs < Quickfix::Group
 		def initialize
-			order = Quickfix::IntArray.new(5)
+			order = Quickfix::IntArray.new(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			super(453, 448, order)
 		end
 
@@ -11667,12 +11708,13 @@ class RequestForPositionsAck < Message
 
 	class NoPartyIDs < Quickfix::Group
 		def initialize
-			order = Quickfix::IntArray.new(5)
+			order = Quickfix::IntArray.new(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			super(453, 448, order)
 		end
 
@@ -11833,12 +11875,13 @@ class PositionReport < Message
 
 	class NoPartyIDs < Quickfix::Group
 		def initialize
-			order = Quickfix::IntArray.new(5)
+			order = Quickfix::IntArray.new(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			super(453, 448, order)
 		end
 
@@ -12570,12 +12613,13 @@ class TradeCaptureReportAck < Message
 
 		class NoPartyIDs < Quickfix::Group
 			def initialize
-				order = Quickfix::IntArray.new(5)
+				order = Quickfix::IntArray.new(6)
 				order[0] = 448
 				order[1] = 447
 				order[2] = 452
-				order[3] = 802
-				order[4] = 0
+				order[3] = 2376
+				order[4] = 802
+				order[5] = 0
 				super(453, 448, order)
 			end
 
@@ -12917,12 +12961,13 @@ class AllocationReport < Message
 
 	class NoPartyIDs < Quickfix::Group
 		def initialize
-			order = Quickfix::IntArray.new(5)
+			order = Quickfix::IntArray.new(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			super(453, 448, order)
 		end
 
@@ -13069,12 +13114,13 @@ class AllocationReportAck < Message
 
 	class NoPartyIDs < Quickfix::Group
 		def initialize
-			order = Quickfix::IntArray.new(5)
+			order = Quickfix::IntArray.new(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			super(453, 448, order)
 		end
 
@@ -13149,12 +13195,13 @@ class SettlementInstructionRequest < Message
 
 	class NoPartyIDs < Quickfix::Group
 		def initialize
-			order = Quickfix::IntArray.new(5)
+			order = Quickfix::IntArray.new(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			super(453, 448, order)
 		end
 
@@ -13178,12 +13225,13 @@ class AssignmentReport < Message
 
 	class NoPartyIDs < Quickfix::Group
 		def initialize
-			order = Quickfix::IntArray.new(5)
+			order = Quickfix::IntArray.new(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			super(453, 448, order)
 		end
 
@@ -13391,12 +13439,13 @@ class CollateralRequest < Message
 
 	class NoPartyIDs < Quickfix::Group
 		def initialize
-			order = Quickfix::IntArray.new(5)
+			order = Quickfix::IntArray.new(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			super(453, 448, order)
 		end
 
@@ -13613,12 +13662,13 @@ class CollateralAssignment < Message
 
 	class NoPartyIDs < Quickfix::Group
 		def initialize
-			order = Quickfix::IntArray.new(5)
+			order = Quickfix::IntArray.new(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			super(453, 448, order)
 		end
 
@@ -13835,12 +13885,13 @@ class CollateralResponse < Message
 
 	class NoPartyIDs < Quickfix::Group
 		def initialize
-			order = Quickfix::IntArray.new(5)
+			order = Quickfix::IntArray.new(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			super(453, 448, order)
 		end
 
@@ -14057,12 +14108,13 @@ class CollateralReport < Message
 
 	class NoPartyIDs < Quickfix::Group
 		def initialize
-			order = Quickfix::IntArray.new(5)
+			order = Quickfix::IntArray.new(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			super(453, 448, order)
 		end
 
@@ -14287,12 +14339,13 @@ class CollateralInquiry < Message
 
 	class NoPartyIDs < Quickfix::Group
 		def initialize
-			order = Quickfix::IntArray.new(5)
+			order = Quickfix::IntArray.new(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			super(453, 448, order)
 		end
 
@@ -14559,12 +14612,13 @@ class CollateralInquiryAck < Message
 
 	class NoPartyIDs < Quickfix::Group
 		def initialize
-			order = Quickfix::IntArray.new(5)
+			order = Quickfix::IntArray.new(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			super(453, 448, order)
 		end
 
@@ -14790,12 +14844,13 @@ class ContraryIntentionReport < Message
 
 	class NoPartyIDs < Quickfix::Group
 		def initialize
-			order = Quickfix::IntArray.new(5)
+			order = Quickfix::IntArray.new(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			super(453, 448, order)
 		end
 
@@ -15423,12 +15478,13 @@ class AdjustedPositionReport < Message
 
 	class NoPartyIDs < Quickfix::Group
 		def initialize
-			order = Quickfix::IntArray.new(5)
+			order = Quickfix::IntArray.new(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			super(453, 448, order)
 		end
 
@@ -15769,12 +15825,13 @@ class AllocationInstructionAlert < Message
 
 	class NoPartyIDs < Quickfix::Group
 		def initialize
-			order = Quickfix::IntArray.new(5)
+			order = Quickfix::IntArray.new(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			super(453, 448, order)
 		end
 
@@ -16201,12 +16258,13 @@ class SettlementObligationReport < Message
 
 		class NoPartyIDs < Quickfix::Group
 			def initialize
-				order = Quickfix::IntArray.new(5)
+				order = Quickfix::IntArray.new(6)
 				order[0] = 448
 				order[1] = 447
 				order[2] = 452
-				order[3] = 802
-				order[4] = 0
+				order[3] = 2376
+				order[4] = 802
+				order[5] = 0
 				super(453, 448, order)
 			end
 
@@ -16580,12 +16638,13 @@ class ApplicationMessageRequest < Message
 
 	class NoPartyIDs < Quickfix::Group
 		def initialize
-			order = Quickfix::IntArray.new(5)
+			order = Quickfix::IntArray.new(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			super(453, 448, order)
 		end
 
@@ -16646,12 +16705,13 @@ class ApplicationMessageRequestAck < Message
 
 	class NoPartyIDs < Quickfix::Group
 		def initialize
-			order = Quickfix::IntArray.new(5)
+			order = Quickfix::IntArray.new(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			super(453, 448, order)
 		end
 
@@ -16714,12 +16774,13 @@ class OrderMassActionReport < Message
 
 	class NoPartyIDs < Quickfix::Group
 		def initialize
-			order = Quickfix::IntArray.new(5)
+			order = Quickfix::IntArray.new(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			super(453, 448, order)
 		end
 
@@ -16754,12 +16815,13 @@ class OrderMassActionRequest < Message
 
 	class NoPartyIDs < Quickfix::Group
 		def initialize
-			order = Quickfix::IntArray.new(5)
+			order = Quickfix::IntArray.new(6)
 			order[0] = 448
 			order[1] = 447
 			order[2] = 452
-			order[3] = 802
-			order[4] = 0
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
 			super(453, 448, order)
 		end
 
@@ -16810,12 +16872,13 @@ class StreamAssignmentRequest < Message
 
 		class NoPartyIDs < Quickfix::Group
 			def initialize
-				order = Quickfix::IntArray.new(5)
+				order = Quickfix::IntArray.new(6)
 				order[0] = 448
 				order[1] = 447
 				order[2] = 452
-				order[3] = 802
-				order[4] = 0
+				order[3] = 2376
+				order[4] = 802
+				order[5] = 0
 				super(453, 448, order)
 			end
 
@@ -16941,12 +17004,13 @@ class StreamAssignmentReport < Message
 
 		class NoPartyIDs < Quickfix::Group
 			def initialize
-				order = Quickfix::IntArray.new(5)
+				order = Quickfix::IntArray.new(6)
 				order[0] = 448
 				order[1] = 447
 				order[2] = 452
-				order[3] = 802
-				order[4] = 0
+				order[3] = 2376
+				order[4] = 802
+				order[5] = 0
 				super(453, 448, order)
 			end
 
@@ -17063,6 +17127,36 @@ class StreamAssignmentReportACK < Message
 	def initialize
 		super
 		getHeader().setField( Quickfix::MsgType.new("CE") )
+	end
+end
+
+class QuoteAcknowledgement < Message
+	def initialize
+		super
+		getHeader().setField( Quickfix::MsgType.new("CW") )
+	end
+
+	class NoPartyIDs < Quickfix::Group
+		def initialize
+			order = Quickfix::IntArray.new(6)
+			order[0] = 448
+			order[1] = 447
+			order[2] = 452
+			order[3] = 2376
+			order[4] = 802
+			order[5] = 0
+			super(453, 448, order)
+		end
+
+		class NoPartySubIDs < Quickfix::Group
+			def initialize
+				order = Quickfix::IntArray.new(3)
+				order[0] = 523
+				order[1] = 803
+				order[2] = 0
+				super(802, 523, order)
+			end
+		end
 	end
 end
 end

@@ -284,7 +284,7 @@ namespace FIX
     const int DefOfferSize = 294;
     const int NoQuoteEntries = 295;
     const int NoQuoteSets = 296;
-    const int QuoteAckStatus = 297;
+    const int QuoteStatus = 297;
     const int QuoteCancelType = 298;
     const int QuoteEntryID = 299;
     const int QuoteRejectReason = 300;
@@ -470,7 +470,6 @@ namespace FIX
     const int TradedFlatSwitch = 258;
     const int BasisFeatureDate = 259;
     const int BasisFeaturePrice = 260;
-    const int QuoteStatus = 297;
     const int UnderlyingSecurityIDSource = 305;
     const int PartyIDSource = 447;
     const int PartyID = 448;
@@ -1532,6 +1531,11 @@ namespace FIX
     const int StreamAsgnAckType = 1503;
     const int RelSymTransactTime = 1504;
     const int StreamAsgnType = 1617;
+    const int EncodedRejectTextLen = 1664;
+    const int EncodedRejectText = 1665;
+    const int SecondaryQuoteID = 1751;
+    const int QuoteAckStatus = 1865;
+    const int PartyRoleQualifier = 2376;
   }
 }
 #endif //FIX_FIELDNUMBERS_H

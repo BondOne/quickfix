@@ -137,7 +137,8 @@ namespace FIX50SP2
   class UserNotification; 
   class StreamAssignmentRequest; 
   class StreamAssignmentReport; 
-  class StreamAssignmentReportACK;
+  class StreamAssignmentReportACK; 
+  class QuoteAcknowledgement;
 
   class MessageCracker
   {
@@ -363,6 +364,8 @@ namespace FIX50SP2
     { throw FIX::UnsupportedMessageType(); }
   virtual void onMessage( const StreamAssignmentReportACK&, const FIX::SessionID& ) 
     { throw FIX::UnsupportedMessageType(); }
+  virtual void onMessage( const QuoteAcknowledgement&, const FIX::SessionID& ) 
+    { throw FIX::UnsupportedMessageType(); }
   virtual void onMessage( IOI&, const FIX::SessionID& ) {} 
  virtual void onMessage( Advertisement&, const FIX::SessionID& ) {} 
  virtual void onMessage( ExecutionReport&, const FIX::SessionID& ) {} 
@@ -471,6 +474,7 @@ namespace FIX50SP2
  virtual void onMessage( StreamAssignmentRequest&, const FIX::SessionID& ) {} 
  virtual void onMessage( StreamAssignmentReport&, const FIX::SessionID& ) {} 
  virtual void onMessage( StreamAssignmentReportACK&, const FIX::SessionID& ) {} 
+ virtual void onMessage( QuoteAcknowledgement&, const FIX::SessionID& ) {} 
 
 public:
   void crack( const Message& message, 
@@ -802,6 +806,9 @@ public:
     else
     if( msgTypeValue == "CE" )
       onMessage( (const StreamAssignmentReportACK&)message, sessionID );
+    else
+    if( msgTypeValue == "CW" )
+      onMessage( (const QuoteAcknowledgement&)message, sessionID );
     else onMessage( message, sessionID );
   }
   
@@ -1135,6 +1142,9 @@ void crack( Message& message,
     else
     if( msgTypeValue == "CE" )
       onMessage( (StreamAssignmentReportACK&)message, sessionID );
+    else
+    if( msgTypeValue == "CW" )
+      onMessage( (QuoteAcknowledgement&)message, sessionID );
     else onMessage( message, sessionID );
   }
 

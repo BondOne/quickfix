@@ -3069,9 +3069,38 @@
    <field name='EncodedTextLen' required='N' />
    <field name='EncodedText' required='N' />
   </message>
+  <message name='PartyDetailsListRequest' msgcat='app' msgtype='CF'>
+   <field name='PartyDetailsListRequestID' required='Y' />
+   <component name='PartyListResponseTypeGrp' required='Y' />
+   <component name='Parties' required='N' />
+   <component name='RequestedPartyRoleGrp' required='N' />
+   <component name='PartyRelationships' required='N' />
+   <field name='SubscriptionRequestType' required='N' />
+   <field name='Text' required='N' />
+   <field name='EncodedTextLen' required='N' />
+   <field name='EncodedText' required='N' />
+  </message>
+  <message name='PartyDetailsListReport' msgcat='app' msgtype='CG'>
+   <component name='ApplicationSequenceControl' required='N' />
+   <field name='PartyDetailsListReportID' required='Y' />
+   <field name='PartyDetailsListRequestID' required='N' />
+   <field name='PartyDetailsRequestResult' required='N' />
+   <field name='TotNoPartyList' required='N' />
+   <field name='LastFragment' required='N' />
+   <component name='PartyListGrp' required='N' />
+   <field name='Text' required='N' />
+   <field name='EncodedTextLen' required='N' />
+   <field name='EncodedText' required='N' />
+  </message>
  </messages>
  <trailer />
  <components>
+  <component name='RelatedAltPtysSubGrp'>
+   <group name='NoRelatedPartyAltSubIDs' required='N'>
+    <field name='RelatedPartyAltSubID' required='N' />
+    <field name='RelatedPartyAltSubIDType' required='N' />
+   </group>
+  </component>
   <component name='DerivativeSecurityXML'>
    <field name='DerivativeSecurityXMLLen' required='N' />
    <field name='DerivativeSecurityXML' required='N' />
@@ -3251,6 +3280,11 @@
     <field name='MDEntryType' required='Y' />
    </group>
   </component>
+  <component name='PartyListResponseTypeGrp'>
+   <group name='NoPartyListResponseTypes' required='Y'>
+    <field name='PartyListResponseType' required='Y' />
+   </group>
+  </component>
   <component name='TrdCapRptAckSideGrp'>
    <group name='NoSides' required='Y'>
     <field name='Side' required='Y' />
@@ -3375,6 +3409,31 @@
    <field name='DiscretionRoundDirection' required='N' />
    <field name='DiscretionScope' required='N' />
   </component>
+  <component name='RiskLimits'>
+   <group name='NoRiskLimits' required='N'>
+    <field name='RiskLimitType' required='N' />
+    <field name='RiskLimitAmount' required='N' />
+    <field name='RiskLimitCurrency' required='N' />
+    <field name='RiskLimitPlatform' required='N' />
+    <component name='RiskInstrumentScope' required='N' />
+    <component name='RiskWarningLevels' required='N' />
+   </group>
+  </component>
+  <component name='AltPtysSubGrp'>
+   <group name='NoPartyAltSubIDs' required='N'>
+    <field name='PartyAltSubID' required='N' />
+    <field name='PartyAltSubIDType' required='N' />
+   </group>
+  </component>
+  <component name='PartyDetail'>
+   <field name='PartyID' required='Y' />
+   <field name='PartyIDSource' required='Y' />
+   <field name='PartyRole' required='Y' />
+   <component name='PtysSubGrp' required='N' />
+   <component name='PartyAltIDs' required='N' />
+   <component name='ContextParties' required='N' />
+   <component name='RiskLimits' required='N' />
+  </component>
   <component name='MatchRules'>
    <group name='NoMatchRules' required='N'>
     <field name='MatchAlgorithm' required='N' />
@@ -3490,6 +3549,13 @@
     <field name='LegAllocSettlCurrency' required='N' />
    </group>
   </component>
+  <component name='RelatedPartyAltIDs'>
+   <group name='NoRelatedPartyAltIDs' required='N'>
+    <field name='RelatedPartyAltID' required='N' />
+    <field name='RelatedPartyAltIDSource' required='N' />
+    <component name='RelatedAltPtysSubGrp' required='N' />
+   </group>
+  </component>
   <component name='PreAllocMlegGrp'>
    <group name='NoAllocs' required='N'>
     <field name='AllocAccount' required='N' />
@@ -3505,6 +3571,12 @@
     <component name='InstrumentLeg' required='N' />
     <field name='LegIOIQty' required='N' />
     <component name='LegStipulations' required='N' />
+   </group>
+  </component>
+  <component name='RelationshipRiskWarningLevels'>
+   <group name='NoRelationshipRiskWarningLevels' required='N'>
+    <field name='RelationshipRiskWarningLevelPercent' required='N' />
+    <field name='RelationshipRiskWarningLevelName' required='N' />
    </group>
   </component>
   <component name='BaseTradingRules'>
@@ -3547,6 +3619,12 @@
     <field name='FairValue' required='N' />
     <field name='OutsideIndexPct' required='N' />
     <field name='ValueOfFutures' required='N' />
+   </group>
+  </component>
+  <component name='ContextPtysSubGrp'>
+   <group name='NoContextPartySubIDs' required='N'>
+    <field name='ContextPartySubID' required='N' />
+    <field name='ContextPartySubIDType' required='N' />
    </group>
   </component>
   <component name='MaturityRules'>
@@ -3807,6 +3885,21 @@
     <field name='StrategyParameterName' required='N' />
     <field name='StrategyParameterType' required='N' />
     <field name='StrategyParameterValue' required='N' />
+   </group>
+  </component>
+  <component name='RelationshipRiskLimits'>
+   <group name='NoRelationshipRiskLimits' required='N'>
+    <field name='RelationshipRiskLimitType' required='N' />
+    <field name='RelationshipRiskLimitAmount' required='N' />
+    <field name='RelationshipRiskLimitCurrency' required='N' />
+    <field name='RelationshipRiskLimitPlatform' required='N' />
+    <component name='RelationshipRiskInstrumentScope' required='N' />
+    <component name='RelationshipRiskWarningLevels' required='N' />
+   </group>
+  </component>
+  <component name='PartyRelationships'>
+   <group name='NoPartyRelationships' required='N'>
+    <field name='PartyRelationship' required='N' />
    </group>
   </component>
   <component name='StrmAsgnRptInstrmtGrp'>
@@ -4126,6 +4219,11 @@
     <component name='PtysSubGrp' required='N' />
    </group>
   </component>
+  <component name='RequestedPartyRoleGrp'>
+   <group name='NoRequestedPartyRoles' required='N'>
+    <field name='RequestedPartyRole' required='N' />
+   </group>
+  </component>
   <component name='TradingSessionRulesGrp'>
    <group name='NoTradingSessionRules' required='N'>
     <field name='TradingSessionID' required='N' />
@@ -4165,6 +4263,12 @@
    <field name='CommType' required='N' />
    <field name='CommCurrency' required='N' />
    <field name='FundRenewWaiv' required='N' />
+  </component>
+  <component name='RelationshipRiskSecAltIDGrp'>
+   <group name='NoRelationshipRiskSecurityAltID' required='N'>
+    <field name='RelationshipRiskSecurityAltID' required='N' />
+    <field name='RelationshipRiskSecurityAltIDSource' required='N' />
+   </group>
   </component>
   <component name='FillsGrp'>
    <group name='NoFills' required='N'>
@@ -4308,6 +4412,12 @@
     <field name='ContraTradeQty' required='N' />
     <field name='ContraTradeTime' required='N' />
     <field name='ContraLegRefID' required='N' />
+   </group>
+  </component>
+  <component name='RelatedPartyGrp'>
+   <group name='NoRelatedPartyIDs' required='N'>
+    <component name='RelatedPartyDetail' required='N' />
+    <component name='PartyRelationships' required='N' />
    </group>
   </component>
   <component name='DerivativeSecurityDefinition'>
@@ -4503,6 +4613,43 @@
     <field name='TrdType' required='N' />
     <field name='FirstPx' required='N' />
     <field name='LastPx' required='N' />
+   </group>
+  </component>
+  <component name='RiskInstrumentScope'>
+   <group name='NoRiskInstruments' required='N'>
+    <field name='RiskInstrumentOperator' required='N' />
+    <field name='RiskSymbol' required='N' />
+    <field name='RiskSymbolSfx' required='N' />
+    <field name='RiskSecurityID' required='N' />
+    <field name='RiskSecurityIDSource' required='N' />
+    <component name='RiskSecAltIDGrp' required='N' />
+    <field name='RiskProduct' required='N' />
+    <field name='RiskProductComplex' required='N' />
+    <field name='RiskSecurityGroup' required='N' />
+    <field name='RiskCFICode' required='N' />
+    <field name='RiskSecurityType' required='N' />
+    <field name='RiskSecuritySubType' required='N' />
+    <field name='RiskMaturityMonthYear' required='N' />
+    <field name='RiskMaturityTime' required='N' />
+    <field name='RiskRestructuringType' required='N' />
+    <field name='RiskSeniority' required='N' />
+    <field name='RiskPutOrCall' required='N' />
+    <field name='RiskFlexibleIndicator' required='N' />
+    <field name='RiskCouponRate' required='N' />
+    <field name='RiskSecurityExchange' required='N' />
+    <field name='RiskSecurityDesc' required='N' />
+    <field name='RiskEncodedSecurityDescLen' required='N' />
+    <field name='RiskEncodedSecurityDesc' required='N' />
+    <field name='RiskInstrumentSettlType' required='N' />
+    <field name='RiskInstrumentMultiplier' required='N' />
+   </group>
+  </component>
+  <component name='ContextParties'>
+   <group name='NoContextPartyIDs' required='N'>
+    <field name='ContextPartyID' required='N' />
+    <field name='ContextPartyIDSource' required='N' />
+    <field name='ContextPartyRole' required='N' />
+    <component name='ContextPtysSubGrp' required='N' />
    </group>
   </component>
   <component name='NstdPtys4SubGrp'>
@@ -4713,6 +4860,12 @@
     <component name='InstrumentPtysSubGrp' required='N' />
    </group>
   </component>
+  <component name='RiskSecAltIDGrp'>
+   <group name='NoRiskSecurityAltID' required='N'>
+    <field name='RiskSecurityAltID' required='N' />
+    <field name='RiskSecurityAltIDSource' required='N' />
+   </group>
+  </component>
   <component name='DerivativeSecurityAltIDGrp'>
    <group name='NoDerivativeSecurityAltID' required='N'>
     <field name='DerivativeSecurityAltID' required='N' />
@@ -4810,6 +4963,42 @@
     <field name='NestedPartySubIDType' required='N' />
    </group>
   </component>
+  <component name='RelationshipRiskInstrumentScope'>
+   <group name='NoRelationshipRiskInstruments' required='N'>
+    <field name='RelationshipRiskInstrumentOperator' required='N' />
+    <field name='RelationshipRiskSymbol' required='N' />
+    <field name='RelationshipRiskSymbolSfx' required='N' />
+    <field name='RelationshipRiskSecurityID' required='N' />
+    <field name='RelationshipRiskSecurityIDSource' required='N' />
+    <component name='RelationshipRiskSecAltIDGrp' required='N' />
+    <field name='RelationshipRiskProduct' required='N' />
+    <field name='RelationshipRiskProductComplex' required='N' />
+    <field name='RelationshipRiskSecurityGroup' required='N' />
+    <field name='RelationshipRiskCFICode' required='N' />
+    <field name='RelationshipRiskSecurityType' required='N' />
+    <field name='RelationshipRiskSecuritySubType' required='N' />
+    <field name='RelationshipRiskMaturityMonthYear' required='N' />
+    <field name='RelationshipRiskMaturityTime' required='N' />
+    <field name='RelationshipRiskRestructuringType' required='N' />
+    <field name='RelationshipRiskSeniority' required='N' />
+    <field name='RelationshipRiskPutOrCall' required='N' />
+    <field name='RelationshipRiskFlexibleIndicator' required='N' />
+    <field name='RelationshipRiskCouponRate' required='N' />
+    <field name='RelationshipRiskSecurityExchange' required='N' />
+    <field name='RelationshipRiskSecurityDesc' required='N' />
+    <field name='RelationshipRiskEncodedSecurityDescLen' required='N' />
+    <field name='RelationshipRiskEncodedSecurityDesc' required='N' />
+    <field name='RelationshipRiskInstrumentSettlType' required='N' />
+    <field name='RelationshipRiskInstrumentMultiplier' required='N' />
+   </group>
+  </component>
+  <component name='PartyAltIDs'>
+   <group name='NoPartyAltIDs' required='N'>
+    <field name='PartyAltID' required='N' />
+    <field name='PartyAltIDSource' required='N' />
+    <component name='AltPtysSubGrp' required='N' />
+   </group>
+  </component>
   <component name='PositionQty'>
    <group name='NoPositions' required='N'>
     <field name='PosType' required='N' />
@@ -4883,6 +5072,12 @@
     <field name='ExecID' required='N' />
    </group>
   </component>
+  <component name='RelatedContextPtysSubGrp'>
+   <group name='NoRelatedContextPartySubIDs' required='N'>
+    <field name='RelatedContextPartySubID' required='N' />
+    <field name='RelatedContextPartySubIDType' required='N' />
+   </group>
+  </component>
   <component name='UnderlyingLegSecurityAltIDGrp'>
    <group name='NoUnderlyingLegSecurityAltID' required='N'>
     <field name='UnderlyingLegSecurityAltID' required='N' />
@@ -4949,6 +5144,15 @@
     <field name='Nested3PartySubID' required='N' />
     <field name='Nested3PartySubIDType' required='N' />
    </group>
+  </component>
+  <component name='RelatedPartyDetail'>
+   <field name='RelatedPartyID' required='N' />
+   <field name='RelatedPartyIDSource' required='N' />
+   <field name='RelatedPartyRole' required='N' />
+   <component name='RelatedPtysSubGrp' required='N' />
+   <component name='RelatedPartyAltIDs' required='N' />
+   <component name='RelatedContextParties' required='N' />
+   <component name='RelationshipRiskLimits' required='N' />
   </component>
   <component name='DerivativeEventsGrp'>
    <group name='NoDerivativeEvents' required='N'>
@@ -5038,6 +5242,12 @@
     <field name='UnderlyingStipValue' required='N' />
    </group>
   </component>
+  <component name='RelatedPtysSubGrp'>
+   <group name='NoRelatedPartySubIDs' required='N'>
+    <field name='RelatedPartySubID' required='N' />
+    <field name='RelatedPartySubIDType' required='N' />
+   </group>
+  </component>
   <component name='ComplexEventDates'>
    <group name='NoComplexEventDates' required='N'>
     <field name='ComplexEventStartDate' required='N' />
@@ -5057,6 +5267,12 @@
    <group name='NoRoutingIDs' required='N'>
     <field name='RoutingType' required='N' />
     <field name='RoutingID' required='N' />
+   </group>
+  </component>
+  <component name='PartyListGrp'>
+   <group name='NoPartyList' required='N'>
+    <component name='PartyDetail' required='N' />
+    <component name='RelatedPartyGrp' required='N' />
    </group>
   </component>
   <component name='RgstDistInstGrp'>
@@ -5254,6 +5470,12 @@
     <field name='OrderBookingQty' required='N' />
    </group>
   </component>
+  <component name='RiskWarningLevels'>
+   <group name='NoRiskWarningLevels' required='N'>
+    <field name='RiskWarningLevelPercent' required='N' />
+    <field name='RiskWarningLevelName' required='N' />
+   </group>
+  </component>
   <component name='NewsRefGrp'>
    <group name='NoNewsRefIDs' required='N'>
     <field name='NewsRefID' required='N' />
@@ -5323,6 +5545,14 @@
     <field name='Text' required='N' />
     <field name='EncodedTextLen' required='N' />
     <field name='EncodedText' required='N' />
+   </group>
+  </component>
+  <component name='RelatedContextParties'>
+   <group name='NoRelatedContextPartyIDs' required='N'>
+    <field name='RelatedContextPartyID' required='N' />
+    <field name='RelatedContextPartyIDSource' required='N' />
+    <field name='RelatedContextPartyRole' required='N' />
+    <component name='RelatedContextPtysSubGrp' required='N' />
    </group>
   </component>
   <component name='ExpirationQty'>
@@ -10020,11 +10250,188 @@
    <value enum='1' description='ASSIGNMENT_REJECTED' />
   </field>
   <field number='1504' name='RelSymTransactTime' type='UTCTIMESTAMP' />
+  <field number='1505' name='PartyDetailsListRequestID' type='STRING' />
+  <field number='1506' name='NoPartyListResponseTypes' type='NUMINGROUP' />
+  <field number='1507' name='PartyListResponseType' type='INT'>
+   <value enum='0' description='RETURN_ALL_AVAILABLE_INFORMATION_ON_PARTIES_AND_RELATED_PARTIES' />
+   <value enum='1' description='RETURN_ONLY_PARTY_INFORMATION' />
+   <value enum='2' description='INCLUDE_INFORMATION_ON_RELATED_PARTIES' />
+   <value enum='3' description='INCLUDE_RISK_LIMIT_INFORMATION' />
+  </field>
+  <field number='1508' name='NoRequestedPartyRoles' type='NUMINGROUP' />
+  <field number='1509' name='RequestedPartyRole' type='INT' />
+  <field number='1510' name='PartyDetailsListReportID' type='STRING' />
+  <field number='1511' name='PartyDetailsRequestResult' type='INT'>
+   <value enum='0' description='VALID_REQUEST' />
+   <value enum='1' description='INVALID_OR_UNSUPPORTED_REQUEST' />
+   <value enum='2' description='NO_PARTIES_OR_PARTY_DETAILS_FOUND_THAT_MATCH_SELECTION_CRITERIA' />
+   <value enum='3' description='UNSUPPORTED_PARTYLISTRESPONSETYPE' />
+   <value enum='4' description='NOT_AUTHORIZED_TO_RETRIEVE_PARTIES_OR_PARTY_DETAILS_DATA' />
+   <value enum='5' description='PARTIES_OR_PARTY_DETAILS_DATA_TEMPORARILY_UNAVAILABLE' />
+   <value enum='6' description='REQUEST_FOR_PARTIES_DATA_NOT_SUPPORTED' />
+   <value enum='99' description='OTHER' />
+  </field>
+  <field number='1512' name='TotNoPartyList' type='INT' />
+  <field number='1513' name='NoPartyList' type='NUMINGROUP' />
+  <field number='1514' name='NoPartyRelationships' type='NUMINGROUP' />
+  <field number='1515' name='PartyRelationship' type='INT'>
+   <value enum='0' description='IS_ALSO' />
+   <value enum='1' description='CLEARS_FOR' />
+   <value enum='2' description='CLEARS_THROUGH' />
+   <value enum='3' description='TRADES_FOR' />
+   <value enum='4' description='TRADES_THROUGH' />
+   <value enum='5' description='SPONSORS' />
+   <value enum='6' description='SPONSORED_THROUGH' />
+   <value enum='7' description='PROVIDES_GUARANTEE_FOR' />
+   <value enum='8' description='IS_GUARANTEED_BY' />
+   <value enum='9' description='MEMBER_OF' />
+   <value enum='10' description='HAS_MEMBERS' />
+   <value enum='11' description='PROVIDES_MARKETPLACE_FOR' />
+   <value enum='12' description='PARTICIPANT_OF_MARKETPLACE' />
+   <value enum='13' description='CARRIES_POSITIONS_FOR' />
+   <value enum='14' description='POSTS_TRADES_TO' />
+   <value enum='15' description='ENTERS_TRADES_FOR' />
+   <value enum='16' description='ENTERS_TRADES_THROUGH' />
+   <value enum='17' description='PROVIDES_QUOTES_TO' />
+   <value enum='18' description='REQUESTS_QUOTES_FROM' />
+   <value enum='19' description='INVESTS_FOR' />
+   <value enum='20' description='INVESTS_THROUGH' />
+   <value enum='21' description='BROKERS_TRADES_FOR' />
+   <value enum='22' description='BROKERS_TRADES_THROUGH' />
+   <value enum='23' description='PROVIDES_TRADING_SERVICES_FOR' />
+   <value enum='24' description='USES_TRADING_SERVICES_OF' />
+   <value enum='25' description='APPROVES_OF' />
+   <value enum='26' description='APPROVED_BY' />
+   <value enum='27' description='PARENT_FIRM_FOR' />
+   <value enum='28' description='SUBSIDIARY_OF' />
+   <value enum='29' description='REGULATORY_OWNER_OF' />
+   <value enum='30' description='OWNED_BY_30' />
+   <value enum='31' description='CONTROLS' />
+   <value enum='32' description='IS_CONTROLLED_BY' />
+   <value enum='33' description='LEGAL' />
+   <value enum='34' description='OWNED_BY_34' />
+   <value enum='35' description='BENEFICIAL_OWNER_OF' />
+   <value enum='36' description='OWNED_BY_36' />
+  </field>
+  <field number='1516' name='NoPartyAltIDs' type='NUMINGROUP' />
+  <field number='1517' name='PartyAltID' type='STRING' />
+  <field number='1518' name='PartyAltIDSource' type='CHAR' />
+  <field number='1519' name='NoPartyAltSubIDs' type='NUMINGROUP' />
+  <field number='1520' name='PartyAltSubID' type='STRING' />
+  <field number='1521' name='PartyAltSubIDType' type='INT' />
+  <field number='1522' name='NoContextPartyIDs' type='NUMINGROUP' />
+  <field number='1523' name='ContextPartyID' type='STRING' />
+  <field number='1524' name='ContextPartyIDSource' type='CHAR' />
+  <field number='1525' name='ContextPartyRole' type='INT' />
+  <field number='1526' name='NoContextPartySubIDs' type='NUMINGROUP' />
+  <field number='1527' name='ContextPartySubID' type='STRING' />
+  <field number='1528' name='ContextPartySubIDType' type='INT' />
+  <field number='1529' name='NoRiskLimits' type='NUMINGROUP' />
+  <field number='1530' name='RiskLimitType' type='INT'>
+   <value enum='1' description='GROSS_LIMIT' />
+   <value enum='2' description='NET_LIMIT' />
+   <value enum='3' description='EXPOSURE' />
+   <value enum='4' description='LONG_LIMIT' />
+   <value enum='5' description='SHORT_LIMIT' />
+  </field>
+  <field number='1531' name='RiskLimitAmount' type='AMT' />
+  <field number='1532' name='RiskLimitCurrency' type='CURRENCY' />
+  <field number='1533' name='RiskLimitPlatform' type='STRING' />
+  <field number='1534' name='NoRiskInstruments' type='NUMINGROUP' />
+  <field number='1535' name='RiskInstrumentOperator' type='INT'>
+   <value enum='1' description='INCLUDE' />
+   <value enum='2' description='EXCLUDE' />
+  </field>
+  <field number='1536' name='RiskSymbol' type='STRING' />
+  <field number='1537' name='RiskSymbolSfx' type='STRING' />
+  <field number='1538' name='RiskSecurityID' type='STRING' />
+  <field number='1539' name='RiskSecurityIDSource' type='STRING' />
+  <field number='1540' name='NoRiskSecurityAltID' type='NUMINGROUP' />
+  <field number='1541' name='RiskSecurityAltID' type='STRING' />
+  <field number='1542' name='RiskSecurityAltIDSource' type='STRING' />
+  <field number='1543' name='RiskProduct' type='INT' />
+  <field number='1544' name='RiskProductComplex' type='STRING' />
+  <field number='1545' name='RiskSecurityGroup' type='STRING' />
+  <field number='1546' name='RiskCFICode' type='STRING' />
+  <field number='1547' name='RiskSecurityType' type='STRING' />
+  <field number='1548' name='RiskSecuritySubType' type='STRING' />
+  <field number='1549' name='RiskMaturityMonthYear' type='MONTHYEAR' />
+  <field number='1550' name='RiskMaturityTime' type='TZTIMEONLY' />
+  <field number='1551' name='RiskRestructuringType' type='STRING' />
+  <field number='1552' name='RiskSeniority' type='STRING' />
+  <field number='1553' name='RiskPutOrCall' type='INT' />
+  <field number='1554' name='RiskFlexibleIndicator' type='BOOLEAN' />
+  <field number='1555' name='RiskCouponRate' type='PERCENTAGE' />
+  <field number='1556' name='RiskSecurityDesc' type='STRING' />
+  <field number='1557' name='RiskInstrumentSettlType' type='STRING' />
+  <field number='1558' name='RiskInstrumentMultiplier' type='FLOAT' />
+  <field number='1559' name='NoRiskWarningLevels' type='NUMINGROUP' />
+  <field number='1560' name='RiskWarningLevelPercent' type='PERCENTAGE' />
+  <field number='1561' name='RiskWarningLevelName' type='STRING' />
+  <field number='1562' name='NoRelatedPartyIDs' type='NUMINGROUP' />
+  <field number='1563' name='RelatedPartyID' type='STRING' />
+  <field number='1564' name='RelatedPartyIDSource' type='CHAR' />
+  <field number='1565' name='RelatedPartyRole' type='INT' />
+  <field number='1566' name='NoRelatedPartySubIDs' type='NUMINGROUP' />
+  <field number='1567' name='RelatedPartySubID' type='STRING' />
+  <field number='1568' name='RelatedPartySubIDType' type='INT' />
+  <field number='1569' name='NoRelatedPartyAltIDs' type='NUMINGROUP' />
+  <field number='1570' name='RelatedPartyAltID' type='STRING' />
+  <field number='1571' name='RelatedPartyAltIDSource' type='CHAR' />
+  <field number='1572' name='NoRelatedPartyAltSubIDs' type='NUMINGROUP' />
+  <field number='1573' name='RelatedPartyAltSubID' type='STRING' />
+  <field number='1574' name='RelatedPartyAltSubIDType' type='INT' />
+  <field number='1575' name='NoRelatedContextPartyIDs' type='NUMINGROUP' />
+  <field number='1576' name='RelatedContextPartyID' type='STRING' />
+  <field number='1577' name='RelatedContextPartyIDSource' type='CHAR' />
+  <field number='1578' name='RelatedContextPartyRole' type='INT' />
+  <field number='1579' name='NoRelatedContextPartySubIDs' type='NUMINGROUP' />
+  <field number='1580' name='RelatedContextPartySubID' type='STRING' />
+  <field number='1581' name='RelatedContextPartySubIDType' type='INT' />
+  <field number='1582' name='NoRelationshipRiskLimits' type='NUMINGROUP' />
+  <field number='1583' name='RelationshipRiskLimitType' type='INT' />
+  <field number='1584' name='RelationshipRiskLimitAmount' type='AMT' />
+  <field number='1585' name='RelationshipRiskLimitCurrency' type='CURRENCY' />
+  <field number='1586' name='RelationshipRiskLimitPlatform' type='STRING' />
+  <field number='1587' name='NoRelationshipRiskInstruments' type='NUMINGROUP' />
+  <field number='1588' name='RelationshipRiskInstrumentOperator' type='INT' />
+  <field number='1589' name='RelationshipRiskSymbol' type='STRING' />
+  <field number='1590' name='RelationshipRiskSymbolSfx' type='STRING' />
+  <field number='1591' name='RelationshipRiskSecurityID' type='STRING' />
+  <field number='1592' name='RelationshipRiskSecurityIDSource' type='STRING' />
+  <field number='1593' name='NoRelationshipRiskSecurityAltID' type='NUMINGROUP' />
+  <field number='1594' name='RelationshipRiskSecurityAltID' type='STRING' />
+  <field number='1595' name='RelationshipRiskSecurityAltIDSource' type='STRING' />
+  <field number='1596' name='RelationshipRiskProduct' type='INT' />
+  <field number='1597' name='RelationshipRiskProductComplex' type='STRING' />
+  <field number='1598' name='RelationshipRiskSecurityGroup' type='STRING' />
+  <field number='1599' name='RelationshipRiskCFICode' type='STRING' />
+  <field number='1600' name='RelationshipRiskSecurityType' type='STRING' />
+  <field number='1601' name='RelationshipRiskSecuritySubType' type='STRING' />
+  <field number='1602' name='RelationshipRiskMaturityMonthYear' type='MONTHYEAR' />
+  <field number='1603' name='RelationshipRiskMaturityTime' type='TZTIMEONLY' />
+  <field number='1604' name='RelationshipRiskRestructuringType' type='STRING' />
+  <field number='1605' name='RelationshipRiskSeniority' type='STRING' />
+  <field number='1606' name='RelationshipRiskPutOrCall' type='INT' />
+  <field number='1607' name='RelationshipRiskFlexibleIndicator' type='BOOLEAN' />
+  <field number='1608' name='RelationshipRiskCouponRate' type='PERCENTAGE' />
+  <field number='1609' name='RelationshipRiskSecurityExchange' type='EXCHANGE' />
+  <field number='1610' name='RelationshipRiskSecurityDesc' type='STRING' />
+  <field number='1611' name='RelationshipRiskInstrumentSettlType' type='STRING' />
+  <field number='1612' name='RelationshipRiskInstrumentMultiplier' type='FLOAT' />
+  <field number='1613' name='NoRelationshipRiskWarningLevels' type='NUMINGROUP' />
+  <field number='1614' name='RelationshipRiskWarningLevelPercent' type='PERCENTAGE' />
+  <field number='1615' name='RelationshipRiskWarningLevelName' type='STRING' />
+  <field number='1616' name='RiskSecurityExchange' type='EXCHANGE' />
   <field number='1617' name='StreamAsgnType' type='INT'>
    <value enum='1' description='ASSIGNMENT' />
    <value enum='2' description='REJECTED' />
    <value enum='3' description='TERMINATE_UNASSIGN' />
   </field>
+  <field number='1618' name='RelationshipRiskEncodedSecurityDescLen' type='LENGTH' />
+  <field number='1619' name='RelationshipRiskEncodedSecurityDesc' type='DATA' />
+  <field number='1620' name='RiskEncodedSecurityDescLen' type='LENGTH' />
+  <field number='1621' name='RiskEncodedSecurityDesc' type='DATA' />
   <field number='1664' name='EncodedRejectTextLen' type='LENGTH' />
   <field number='1665' name='EncodedRejectText' type='DATA' />
   <field number='1751' name='SecondaryQuoteID' type='STRING' />

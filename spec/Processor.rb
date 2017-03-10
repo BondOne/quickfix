@@ -152,10 +152,15 @@ class Processor
 
   def component( element )
     component = lookupComponent( element.attributes["name"] )
-    component.elements.each("field") { |field|
-      @generators.each { |generator|
-        generator.field(field.attributes["name"], lookupField(field.attributes["name"])) 
-      }
+    component.elements.each("field|component") { |field|
+      if(field.name == "field")
+        @generators.each { |generator|
+          generator.field(field.attributes["name"], lookupField(field.attributes["name"])) 
+        }
+      end
+      if(field.name == "component")
+        component(field)
+      end
     }
     groups( lookupComponent(element.attributes["name"]) )
   end

@@ -77,19 +77,6 @@ inline int number_of_symbols_in( const signed_int value )
   return symbols;
 }
 
-static const char digit_pairs[201] = {
-  "00010203040506070809"
-  "10111213141516171819"
-  "20212223242526272829"
-  "30313233343536373839"
-  "40414243444546474849"
-  "50515253545556575859"
-  "60616263646566676869"
-  "70717273747576777879"
-  "80818283848586878889"
-  "90919293949596979899"
-};
-
 inline char* integer_to_string( char* buf, const size_t len, signed_int t )
 {
   const bool isNegative = t < 0;
@@ -99,23 +86,11 @@ inline char* integer_to_string( char* buf, const size_t len, signed_int t )
   
   unsigned_int number = UNSIGNED_VALUE_OF( t );
 
-  while( number > 99 )
+  do
   {
-    unsigned_int pos = number % 100;
-    number /= 100;
-    p -= 2;
-    *(short*)(p) = *(short*)(digit_pairs + 2 * pos);
-  }
-
-  if( number > 9 )
-  {
-    p -= 2;
-    *(short*)(p) = *(short*)(digit_pairs + 2 * number);
-  }
-  else
-  {
-    *--p = '0' + char(number);
-  }
+    *--p = '0' + char(number % 10);
+    number /= 10;
+  } while( number > 0 );
 
   if( isNegative )
     *--p = '-';

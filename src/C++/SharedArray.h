@@ -76,7 +76,11 @@ namespace FIX
         return shared_array();
 
       //verify the needed buffer size to allocate counter object and nSize elements
-      const std::size_t sizeToAllocate = nSize + ( sizeof(atomic_count) / sizeof(T) + 1 );
+      std::size_t sizeToUse = nSize;
+      std::size_t remainder = nSize * sizeof(T) % sizeof(std::size_t);
+      if (remainder != 0)
+        sizeToUse = (nSize * sizeof(T) + sizeof(std::size_t) - remainder) / sizeof(T);
+      const std::size_t sizeToAllocate = sizeToUse + ( sizeof(atomic_count) / sizeof(T) + 1 );
 
       //allocate and zero-fill the buffer
       T* storage = new T[ sizeToAllocate ];
@@ -84,9 +88,9 @@ namespace FIX
 
       // create the counter object at the end of the storage
       // with initial reference count set to 1
-      new (&storage[nSize]) atomic_count( 1 );
+      new (&storage[sizeToUse]) atomic_count( 1 );
 
-      return shared_array(storage, nSize);
+      return shared_array(storage, sizeToUse);
     }
 
   private:

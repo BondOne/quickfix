@@ -5858,6 +5858,7 @@
    <value enum='CC' description='STREAMASSIGNMENTREQUEST' />
    <value enum='CD' description='STREAMASSIGNMENTREPORT' />
    <value enum='CE' description='STREAMASSIGNMENTREPORTACK' />
+   <value enum='CW' description='QUOTEACKNOWLEDGEMENT' />
    <value enum='D' description='NEWORDERSINGLE' />
    <value enum='E' description='NEWORDERLIST' />
    <value enum='F' description='ORDERCANCELREQUEST' />

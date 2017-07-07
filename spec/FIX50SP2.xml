@@ -1812,6 +1812,7 @@
    <field name='QuoteRespID' required='Y' />
    <field name='QuoteID' required='N' />
    <field name='QuoteMsgID' required='N' />
+   <field name='QuoteReqID' required='N' />
    <field name='QuoteRespType' required='Y' />
    <field name='ClOrdID' required='N' />
    <field name='OrderCapacity' required='N' />

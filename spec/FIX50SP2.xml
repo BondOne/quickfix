@@ -3093,6 +3093,19 @@
    <field name='EncodedTextLen' required='N' />
    <field name='EncodedText' required='N' />
   </message>
+  <message name='SetupMonitorRequest' msgcat='app' msgtype='USMQ'>
+   <field name='SetupMonitorRequestID' required='Y' />
+   <field name='MDFeedType' required='Y' />
+   <field name='MDStreamID' required='N' />
+   <field name='TransactTime' required='Y' />
+   <component name='SetupMonitorEntryGrp' required='Y' />
+  </message>
+  <message name='SetupMonitorRequestAck' msgcat='app' msgtype='USMQK'>
+   <field name='SetupMonitorRequestID' required='Y' />
+   <field name='MDFeedType' required='N' />
+   <field name='SetupMonitorRequestStatus' required='Y' />
+   <field name='Text' required='N' />
+  </message>
  </messages>
  <trailer />
  <components>
@@ -3161,6 +3174,8 @@
    <field name='LegOptionRatio' required='N' />
    <field name='LegContractMultiplierUnit' required='N' />
    <field name='LegFlowScheduleType' required='N' />
+   <field name='LegDV01' required='N' />
+   <field name='LegNotionalNeutral' required='N' />
   </component>
   <component name='InstrmtLegExecGrp'>
    <group name='NoLegs' required='N'>
@@ -4527,6 +4542,7 @@
   </component>
   <component name='SpreadOrBenchmarkCurveData'>
    <field name='Spread' required='N' />
+   <field name='SpreadType' required='N' />
    <field name='BenchmarkCurveCurrency' required='N' />
    <field name='BenchmarkCurveName' required='N' />
    <field name='BenchmarkCurvePoint' required='N' />
@@ -4560,7 +4576,10 @@
     <component name='SpreadOrBenchmarkCurveData' required='N' />
     <field name='OrdType' required='N' />
     <field name='Currency' required='N' />
+    <field name='UpfrontPrice' required='N' />
+    <field name='UpfrontPriceType' required='N' />
     <field name='MDEntrySize' required='N' />
+    <field name='OpenInterest' required='N' />
     <component name='SecSizesGrp' required='N' />
     <field name='LotType' required='N' />
     <field name='MDEntryDate' required='N' />
@@ -4665,7 +4684,7 @@
     <field name='DeleteReason' required='N' />
     <field name='MDSubBookType' required='N' />
     <field name='MarketDepth' required='N' />
-    <field name='MDEntryType' required='N' />
+    <field name='MDEntryType' required='Y' />
     <field name='MDEntryID' required='N' />
     <field name='MDEntryRefID' required='N' />
     <component name='Instrument' required='N' />
@@ -4729,6 +4748,8 @@
     <field name='TransBkdTime' required='N' />
     <field name='TransactTime' required='N' />
     <field name='MDQuoteType' required='N' />
+    <field name='PriceScalingFactor' required='N' />
+    <field name='VolumeScalingFactor' required='N' />
     <field name='RptSeq' required='N' />
     <field name='DealingCapacity' required='N' />
     <field name='MDEntrySpotRate' required='N' />
@@ -5634,6 +5655,28 @@
     <field name='UnderlyingInstrumentPartyIDSource' required='N' />
     <field name='UnderlyingInstrumentPartyRole' required='N' />
     <component name='UndlyInstrumentPtysSubGrp' required='N' />
+   </group>
+  </component>
+  <component name='SetupMonitorEntryGrp'>
+   <group name='NoMonitorIDs' required='N'>
+    <field name='MonitorID' required='Y' />
+    <field name='MonitorSortOption' required='N' />
+    <field name='MonitorNumber' required='N' />
+    <field name='ClearMonitorIndicator' required='N' />
+    <field name='MonitorPageNumber' required='N' />
+    <component name='MonitorRowGrp' required='N' />
+   </group>
+  </component>
+  <component name='MonitorRowGrp'>
+   <group name='NoMonitorRows' required='N'>
+    <field name='RowNumber' required='N' />
+    <field name='RowLoadAction' required='N' />
+    <field name='RowForegroundColor' required='N' />
+    <component name='Instrument' required='N' />
+    <component name='SpreadOrBenchmarkCurveData' required='N' />
+    <field name='SecurityIDSourceOverride' required='N' />
+    <field name='SuppressPricesIndicator' required='N' />
+    <field name='Text' required='N' />
    </group>
   </component>
  </components>
@@ -10436,6 +10479,10 @@
   <field number='1621' name='RiskEncodedSecurityDesc' type='DATA' />
   <field number='1664' name='EncodedRejectTextLen' type='LENGTH' />
   <field number='1665' name='EncodedRejectText' type='DATA' />
+  <field number='1741' name='UpfrontPriceType' type='INT'>
+   <value enum='3' description='FIXED_AMOUNT' />
+  </field>
+  <field number='1742' name='UpfrontPrice' type='PRICE' />
   <field number='1751' name='SecondaryQuoteID' type='STRING' />
   <field number='1865' name='QuoteAckStatus' type='INT'>
    <value enum='0' description='RECEIVED_NOT_YET_PROCESSED' />
@@ -10443,5 +10490,52 @@
    <value enum='2' description='REJECTED' />
   </field>
   <field number='2376' name='PartyRoleQualifier' type='INT' />
+  <field number='6632' name='BenchmarkSecurityDesc' type='STRING' />
+  <field number='22041' name='LegDV01' type='PRICE' />
+  <field number='22048' name='SpreadType' type='INT'>
+   <value enum='0' description='BENCHMARK' />
+   <value enum='1' description='BREAKEVEN' />
+   <value enum='2' description='EFP_RATE' />
+  </field>
+  <field number='22049' name='LegNotionalNeutral' type='PRICE' />
+  <field number='22050' name='PriceScalingFactor' type='INT' />
+  <field number='22051' name='VolumeScalingFactor' type='INT' />
+  <field number='22056' name='SetupMonitorRequestID' type='STRING' />
+  <field number='22057' name='NoMonitorIDs' type='NUMINGROUP' />
+  <field number='22058' name='MonitorID' type='STRING' />
+  <field number='22059' name='ClearMonitorIndicator' type='BOOLEAN' />
+  <field number='22060' name='MonitorSortOption' type='CHAR'>
+   <value enum='A' description='ABSOLUTE' />
+   <value enum='M' description='MATURITY' />
+  </field>
+  <field number='22061' name='MonitorNumber' type='INT' />
+  <field number='22062' name='MonitorPageNumber' type='INT' />
+  <field number='22063' name='NoMonitorRows' type='NUMINGROUP' />
+  <field number='22064' name='RowNumber' type='INT' />
+  <field number='22065' name='RowLoadAction' type='INT'>
+   <value enum='0' description='ADD_ROW' />
+   <value enum='1' description='MODIFY_ROW' />
+   <value enum='2' description='DELETE_ROW' />
+  </field>
+  <field number='22066' name='RowForegroundColor' type='INT'>
+   <value enum='2' description='AMBER' />
+   <value enum='4' description='WHITE' />
+  </field>
+  <field number='22067' name='SecurityIDSourceOverride' type='STRING'>
+   <value enum='1' description='CUSIP' />
+   <value enum='2' description='SEDOL' />
+   <value enum='4' description='ISIN_NUMBER' />
+   <value enum='6' description='ISO_CURRENCY_CODE' />
+   <value enum='8' description='EXCHANGE_SYMBOL' />
+   <value enum='A' description='BLOOMBERG_SYMBOL' />
+   <value enum='B' description='WERTPAPIER' />
+   <value enum='D' description='VALOREN' />
+   <value enum='M' description='MARKETPLACE_ASSIGNED_IDENTIFIER' />
+  </field>
+  <field number='22068' name='SuppressPricesIndicator' type='BOOLEAN' />
+  <field number='22069' name='SetupMonitorRequestStatus' type='INT'>
+   <value enum='0' description='ACCEPTED' />
+   <value enum='1' description='REJECTED' />
+  </field>
  </fields>
 </fix>

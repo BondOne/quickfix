@@ -3126,6 +3126,7 @@
    <field name='LegSecurityID' required='N' />
    <field name='LegSecurityIDSource' required='N' />
    <component name='LegSecAltIDGrp' required='N' />
+   <field name='LegID' required='N' />
    <field name='LegProduct' required='N' />
    <field name='LegCFICode' required='N' />
    <field name='LegSecurityType' required='N' />
@@ -10484,6 +10485,7 @@
   </field>
   <field number='1742' name='UpfrontPrice' type='PRICE' />
   <field number='1751' name='SecondaryQuoteID' type='STRING' />
+  <field number='1788' name='LegID' type='STRING' />
   <field number='1865' name='QuoteAckStatus' type='INT'>
    <value enum='0' description='RECEIVED_NOT_YET_PROCESSED' />
    <value enum='1' description='ACCEPTED' />

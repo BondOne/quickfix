@@ -10675,12 +10675,824 @@ class RelSymTransactTime(quickfix.UtcTimeStampField):
 		else:
 			quickfix.UtcTimeStampField.__init__(self, 1504, data)
 
+class PartyDetailsListRequestID(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1505)
+		else:
+			quickfix.StringField.__init__(self, 1505, data)
+
+class NoPartyListResponseTypes(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 1506)
+		else:
+			quickfix.IntField.__init__(self, 1506, data)
+
+class PartyListResponseType(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 1507)
+		else:
+			quickfix.IntField.__init__(self, 1507, data)
+
+class NoRequestedPartyRoles(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 1508)
+		else:
+			quickfix.IntField.__init__(self, 1508, data)
+
+class RequestedPartyRole(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 1509)
+		else:
+			quickfix.IntField.__init__(self, 1509, data)
+
+class PartyDetailsListReportID(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1510)
+		else:
+			quickfix.StringField.__init__(self, 1510, data)
+
+class PartyDetailsRequestResult(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 1511)
+		else:
+			quickfix.IntField.__init__(self, 1511, data)
+
+class TotNoPartyList(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 1512)
+		else:
+			quickfix.IntField.__init__(self, 1512, data)
+
+class NoPartyList(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 1513)
+		else:
+			quickfix.IntField.__init__(self, 1513, data)
+
+class NoPartyRelationships(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 1514)
+		else:
+			quickfix.IntField.__init__(self, 1514, data)
+
+class PartyRelationship(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 1515)
+		else:
+			quickfix.IntField.__init__(self, 1515, data)
+
+class NoPartyAltIDs(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 1516)
+		else:
+			quickfix.IntField.__init__(self, 1516, data)
+
+class PartyAltID(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1517)
+		else:
+			quickfix.StringField.__init__(self, 1517, data)
+
+class PartyAltIDSource(quickfix.CharField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.CharField.__init__(self, 1518)
+		else:
+			quickfix.CharField.__init__(self, 1518, data)
+
+class NoPartyAltSubIDs(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 1519)
+		else:
+			quickfix.IntField.__init__(self, 1519, data)
+
+class PartyAltSubID(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1520)
+		else:
+			quickfix.StringField.__init__(self, 1520, data)
+
+class PartyAltSubIDType(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 1521)
+		else:
+			quickfix.IntField.__init__(self, 1521, data)
+
+class NoContextPartyIDs(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 1522)
+		else:
+			quickfix.IntField.__init__(self, 1522, data)
+
+class ContextPartyID(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1523)
+		else:
+			quickfix.StringField.__init__(self, 1523, data)
+
+class ContextPartyIDSource(quickfix.CharField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.CharField.__init__(self, 1524)
+		else:
+			quickfix.CharField.__init__(self, 1524, data)
+
+class ContextPartyRole(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 1525)
+		else:
+			quickfix.IntField.__init__(self, 1525, data)
+
+class NoContextPartySubIDs(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 1526)
+		else:
+			quickfix.IntField.__init__(self, 1526, data)
+
+class ContextPartySubID(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1527)
+		else:
+			quickfix.StringField.__init__(self, 1527, data)
+
+class ContextPartySubIDType(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 1528)
+		else:
+			quickfix.IntField.__init__(self, 1528, data)
+
+class NoRiskLimits(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 1529)
+		else:
+			quickfix.IntField.__init__(self, 1529, data)
+
+class RiskLimitType(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 1530)
+		else:
+			quickfix.IntField.__init__(self, 1530, data)
+
+class RiskLimitAmount(quickfix.DoubleField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.DoubleField.__init__(self, 1531)
+		else:
+			quickfix.DoubleField.__init__(self, 1531, data)
+
+class RiskLimitCurrency(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1532)
+		else:
+			quickfix.StringField.__init__(self, 1532, data)
+
+class RiskLimitPlatform(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1533)
+		else:
+			quickfix.StringField.__init__(self, 1533, data)
+
+class NoRiskInstruments(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 1534)
+		else:
+			quickfix.IntField.__init__(self, 1534, data)
+
+class RiskInstrumentOperator(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 1535)
+		else:
+			quickfix.IntField.__init__(self, 1535, data)
+
+class RiskSymbol(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1536)
+		else:
+			quickfix.StringField.__init__(self, 1536, data)
+
+class RiskSymbolSfx(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1537)
+		else:
+			quickfix.StringField.__init__(self, 1537, data)
+
+class RiskSecurityID(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1538)
+		else:
+			quickfix.StringField.__init__(self, 1538, data)
+
+class RiskSecurityIDSource(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1539)
+		else:
+			quickfix.StringField.__init__(self, 1539, data)
+
+class NoRiskSecurityAltID(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 1540)
+		else:
+			quickfix.IntField.__init__(self, 1540, data)
+
+class RiskSecurityAltID(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1541)
+		else:
+			quickfix.StringField.__init__(self, 1541, data)
+
+class RiskSecurityAltIDSource(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1542)
+		else:
+			quickfix.StringField.__init__(self, 1542, data)
+
+class RiskProduct(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 1543)
+		else:
+			quickfix.IntField.__init__(self, 1543, data)
+
+class RiskProductComplex(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1544)
+		else:
+			quickfix.StringField.__init__(self, 1544, data)
+
+class RiskSecurityGroup(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1545)
+		else:
+			quickfix.StringField.__init__(self, 1545, data)
+
+class RiskCFICode(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1546)
+		else:
+			quickfix.StringField.__init__(self, 1546, data)
+
+class RiskSecurityType(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1547)
+		else:
+			quickfix.StringField.__init__(self, 1547, data)
+
+class RiskSecuritySubType(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1548)
+		else:
+			quickfix.StringField.__init__(self, 1548, data)
+
+class RiskMaturityMonthYear(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1549)
+		else:
+			quickfix.StringField.__init__(self, 1549, data)
+
+class RiskMaturityTime(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1550)
+		else:
+			quickfix.StringField.__init__(self, 1550, data)
+
+class RiskRestructuringType(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1551)
+		else:
+			quickfix.StringField.__init__(self, 1551, data)
+
+class RiskSeniority(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1552)
+		else:
+			quickfix.StringField.__init__(self, 1552, data)
+
+class RiskPutOrCall(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 1553)
+		else:
+			quickfix.IntField.__init__(self, 1553, data)
+
+class RiskFlexibleIndicator(quickfix.BoolField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.BoolField.__init__(self, 1554)
+		else:
+			quickfix.BoolField.__init__(self, 1554, data)
+
+class RiskCouponRate(quickfix.DoubleField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.DoubleField.__init__(self, 1555)
+		else:
+			quickfix.DoubleField.__init__(self, 1555, data)
+
+class RiskSecurityDesc(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1556)
+		else:
+			quickfix.StringField.__init__(self, 1556, data)
+
+class RiskInstrumentSettlType(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1557)
+		else:
+			quickfix.StringField.__init__(self, 1557, data)
+
+class RiskInstrumentMultiplier(quickfix.DoubleField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.DoubleField.__init__(self, 1558)
+		else:
+			quickfix.DoubleField.__init__(self, 1558, data)
+
+class NoRiskWarningLevels(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 1559)
+		else:
+			quickfix.IntField.__init__(self, 1559, data)
+
+class RiskWarningLevelPercent(quickfix.DoubleField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.DoubleField.__init__(self, 1560)
+		else:
+			quickfix.DoubleField.__init__(self, 1560, data)
+
+class RiskWarningLevelName(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1561)
+		else:
+			quickfix.StringField.__init__(self, 1561, data)
+
+class NoRelatedPartyIDs(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 1562)
+		else:
+			quickfix.IntField.__init__(self, 1562, data)
+
+class RelatedPartyID(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1563)
+		else:
+			quickfix.StringField.__init__(self, 1563, data)
+
+class RelatedPartyIDSource(quickfix.CharField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.CharField.__init__(self, 1564)
+		else:
+			quickfix.CharField.__init__(self, 1564, data)
+
+class RelatedPartyRole(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 1565)
+		else:
+			quickfix.IntField.__init__(self, 1565, data)
+
+class NoRelatedPartySubIDs(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 1566)
+		else:
+			quickfix.IntField.__init__(self, 1566, data)
+
+class RelatedPartySubID(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1567)
+		else:
+			quickfix.StringField.__init__(self, 1567, data)
+
+class RelatedPartySubIDType(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 1568)
+		else:
+			quickfix.IntField.__init__(self, 1568, data)
+
+class NoRelatedPartyAltIDs(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 1569)
+		else:
+			quickfix.IntField.__init__(self, 1569, data)
+
+class RelatedPartyAltID(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1570)
+		else:
+			quickfix.StringField.__init__(self, 1570, data)
+
+class RelatedPartyAltIDSource(quickfix.CharField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.CharField.__init__(self, 1571)
+		else:
+			quickfix.CharField.__init__(self, 1571, data)
+
+class NoRelatedPartyAltSubIDs(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 1572)
+		else:
+			quickfix.IntField.__init__(self, 1572, data)
+
+class RelatedPartyAltSubID(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1573)
+		else:
+			quickfix.StringField.__init__(self, 1573, data)
+
+class RelatedPartyAltSubIDType(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 1574)
+		else:
+			quickfix.IntField.__init__(self, 1574, data)
+
+class NoRelatedContextPartyIDs(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 1575)
+		else:
+			quickfix.IntField.__init__(self, 1575, data)
+
+class RelatedContextPartyID(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1576)
+		else:
+			quickfix.StringField.__init__(self, 1576, data)
+
+class RelatedContextPartyIDSource(quickfix.CharField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.CharField.__init__(self, 1577)
+		else:
+			quickfix.CharField.__init__(self, 1577, data)
+
+class RelatedContextPartyRole(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 1578)
+		else:
+			quickfix.IntField.__init__(self, 1578, data)
+
+class NoRelatedContextPartySubIDs(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 1579)
+		else:
+			quickfix.IntField.__init__(self, 1579, data)
+
+class RelatedContextPartySubID(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1580)
+		else:
+			quickfix.StringField.__init__(self, 1580, data)
+
+class RelatedContextPartySubIDType(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 1581)
+		else:
+			quickfix.IntField.__init__(self, 1581, data)
+
+class NoRelationshipRiskLimits(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 1582)
+		else:
+			quickfix.IntField.__init__(self, 1582, data)
+
+class RelationshipRiskLimitType(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 1583)
+		else:
+			quickfix.IntField.__init__(self, 1583, data)
+
+class RelationshipRiskLimitAmount(quickfix.DoubleField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.DoubleField.__init__(self, 1584)
+		else:
+			quickfix.DoubleField.__init__(self, 1584, data)
+
+class RelationshipRiskLimitCurrency(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1585)
+		else:
+			quickfix.StringField.__init__(self, 1585, data)
+
+class RelationshipRiskLimitPlatform(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1586)
+		else:
+			quickfix.StringField.__init__(self, 1586, data)
+
+class NoRelationshipRiskInstruments(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 1587)
+		else:
+			quickfix.IntField.__init__(self, 1587, data)
+
+class RelationshipRiskInstrumentOperator(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 1588)
+		else:
+			quickfix.IntField.__init__(self, 1588, data)
+
+class RelationshipRiskSymbol(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1589)
+		else:
+			quickfix.StringField.__init__(self, 1589, data)
+
+class RelationshipRiskSymbolSfx(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1590)
+		else:
+			quickfix.StringField.__init__(self, 1590, data)
+
+class RelationshipRiskSecurityID(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1591)
+		else:
+			quickfix.StringField.__init__(self, 1591, data)
+
+class RelationshipRiskSecurityIDSource(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1592)
+		else:
+			quickfix.StringField.__init__(self, 1592, data)
+
+class NoRelationshipRiskSecurityAltID(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 1593)
+		else:
+			quickfix.IntField.__init__(self, 1593, data)
+
+class RelationshipRiskSecurityAltID(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1594)
+		else:
+			quickfix.StringField.__init__(self, 1594, data)
+
+class RelationshipRiskSecurityAltIDSource(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1595)
+		else:
+			quickfix.StringField.__init__(self, 1595, data)
+
+class RelationshipRiskProduct(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 1596)
+		else:
+			quickfix.IntField.__init__(self, 1596, data)
+
+class RelationshipRiskProductComplex(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1597)
+		else:
+			quickfix.StringField.__init__(self, 1597, data)
+
+class RelationshipRiskSecurityGroup(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1598)
+		else:
+			quickfix.StringField.__init__(self, 1598, data)
+
+class RelationshipRiskCFICode(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1599)
+		else:
+			quickfix.StringField.__init__(self, 1599, data)
+
+class RelationshipRiskSecurityType(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1600)
+		else:
+			quickfix.StringField.__init__(self, 1600, data)
+
+class RelationshipRiskSecuritySubType(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1601)
+		else:
+			quickfix.StringField.__init__(self, 1601, data)
+
+class RelationshipRiskMaturityMonthYear(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1602)
+		else:
+			quickfix.StringField.__init__(self, 1602, data)
+
+class RelationshipRiskMaturityTime(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1603)
+		else:
+			quickfix.StringField.__init__(self, 1603, data)
+
+class RelationshipRiskRestructuringType(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1604)
+		else:
+			quickfix.StringField.__init__(self, 1604, data)
+
+class RelationshipRiskSeniority(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1605)
+		else:
+			quickfix.StringField.__init__(self, 1605, data)
+
+class RelationshipRiskPutOrCall(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 1606)
+		else:
+			quickfix.IntField.__init__(self, 1606, data)
+
+class RelationshipRiskFlexibleIndicator(quickfix.BoolField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.BoolField.__init__(self, 1607)
+		else:
+			quickfix.BoolField.__init__(self, 1607, data)
+
+class RelationshipRiskCouponRate(quickfix.DoubleField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.DoubleField.__init__(self, 1608)
+		else:
+			quickfix.DoubleField.__init__(self, 1608, data)
+
+class RelationshipRiskSecurityExchange(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1609)
+		else:
+			quickfix.StringField.__init__(self, 1609, data)
+
+class RelationshipRiskSecurityDesc(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1610)
+		else:
+			quickfix.StringField.__init__(self, 1610, data)
+
+class RelationshipRiskInstrumentSettlType(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1611)
+		else:
+			quickfix.StringField.__init__(self, 1611, data)
+
+class RelationshipRiskInstrumentMultiplier(quickfix.DoubleField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.DoubleField.__init__(self, 1612)
+		else:
+			quickfix.DoubleField.__init__(self, 1612, data)
+
+class NoRelationshipRiskWarningLevels(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 1613)
+		else:
+			quickfix.IntField.__init__(self, 1613, data)
+
+class RelationshipRiskWarningLevelPercent(quickfix.DoubleField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.DoubleField.__init__(self, 1614)
+		else:
+			quickfix.DoubleField.__init__(self, 1614, data)
+
+class RelationshipRiskWarningLevelName(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1615)
+		else:
+			quickfix.StringField.__init__(self, 1615, data)
+
+class RiskSecurityExchange(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1616)
+		else:
+			quickfix.StringField.__init__(self, 1616, data)
+
 class StreamAsgnType(quickfix.IntField):
 	def __init__(self, data = None):
 		if data == None:
 			quickfix.IntField.__init__(self, 1617)
 		else:
 			quickfix.IntField.__init__(self, 1617, data)
+
+class RelationshipRiskEncodedSecurityDescLen(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 1618)
+		else:
+			quickfix.IntField.__init__(self, 1618, data)
+
+class RelationshipRiskEncodedSecurityDesc(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1619)
+		else:
+			quickfix.StringField.__init__(self, 1619, data)
+
+class RiskEncodedSecurityDescLen(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 1620)
+		else:
+			quickfix.IntField.__init__(self, 1620, data)
+
+class RiskEncodedSecurityDesc(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1621)
+		else:
+			quickfix.StringField.__init__(self, 1621, data)
 
 class EncodedRejectTextLen(quickfix.IntField):
 	def __init__(self, data = None):
@@ -10696,12 +11508,33 @@ class EncodedRejectText(quickfix.StringField):
 		else:
 			quickfix.StringField.__init__(self, 1665, data)
 
+class UpfrontPriceType(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 1741)
+		else:
+			quickfix.IntField.__init__(self, 1741, data)
+
+class UpfrontPrice(quickfix.DoubleField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.DoubleField.__init__(self, 1742)
+		else:
+			quickfix.DoubleField.__init__(self, 1742, data)
+
 class SecondaryQuoteID(quickfix.StringField):
 	def __init__(self, data = None):
 		if data == None:
 			quickfix.StringField.__init__(self, 1751)
 		else:
 			quickfix.StringField.__init__(self, 1751, data)
+
+class LegID(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 1788)
+		else:
+			quickfix.StringField.__init__(self, 1788, data)
 
 class QuoteAckStatus(quickfix.IntField):
 	def __init__(self, data = None):
@@ -10716,4 +11549,144 @@ class PartyRoleQualifier(quickfix.IntField):
 			quickfix.IntField.__init__(self, 2376)
 		else:
 			quickfix.IntField.__init__(self, 2376, data)
+
+class BenchmarkSecurityDesc(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 6632)
+		else:
+			quickfix.StringField.__init__(self, 6632, data)
+
+class LegDV01(quickfix.DoubleField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.DoubleField.__init__(self, 22041)
+		else:
+			quickfix.DoubleField.__init__(self, 22041, data)
+
+class SpreadType(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 22048)
+		else:
+			quickfix.IntField.__init__(self, 22048, data)
+
+class LegNotionalNeutral(quickfix.DoubleField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.DoubleField.__init__(self, 22049)
+		else:
+			quickfix.DoubleField.__init__(self, 22049, data)
+
+class PriceScalingFactor(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 22050)
+		else:
+			quickfix.IntField.__init__(self, 22050, data)
+
+class VolumeScalingFactor(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 22051)
+		else:
+			quickfix.IntField.__init__(self, 22051, data)
+
+class SetupMonitorRequestID(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 22056)
+		else:
+			quickfix.StringField.__init__(self, 22056, data)
+
+class NoMonitorIDs(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 22057)
+		else:
+			quickfix.IntField.__init__(self, 22057, data)
+
+class MonitorID(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 22058)
+		else:
+			quickfix.StringField.__init__(self, 22058, data)
+
+class ClearMonitorIndicator(quickfix.BoolField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.BoolField.__init__(self, 22059)
+		else:
+			quickfix.BoolField.__init__(self, 22059, data)
+
+class MonitorSortOption(quickfix.CharField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.CharField.__init__(self, 22060)
+		else:
+			quickfix.CharField.__init__(self, 22060, data)
+
+class MonitorNumber(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 22061)
+		else:
+			quickfix.IntField.__init__(self, 22061, data)
+
+class MonitorPageNumber(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 22062)
+		else:
+			quickfix.IntField.__init__(self, 22062, data)
+
+class NoMonitorRows(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 22063)
+		else:
+			quickfix.IntField.__init__(self, 22063, data)
+
+class RowNumber(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 22064)
+		else:
+			quickfix.IntField.__init__(self, 22064, data)
+
+class RowLoadAction(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 22065)
+		else:
+			quickfix.IntField.__init__(self, 22065, data)
+
+class RowForegroundColor(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 22066)
+		else:
+			quickfix.IntField.__init__(self, 22066, data)
+
+class SecurityIDSourceOverride(quickfix.StringField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.StringField.__init__(self, 22067)
+		else:
+			quickfix.StringField.__init__(self, 22067, data)
+
+class SuppressPricesIndicator(quickfix.BoolField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.BoolField.__init__(self, 22068)
+		else:
+			quickfix.BoolField.__init__(self, 22068, data)
+
+class SetupMonitorRequestStatus(quickfix.IntField):
+	def __init__(self, data = None):
+		if data == None:
+			quickfix.IntField.__init__(self, 22069)
+		else:
+			quickfix.IntField.__init__(self, 22069, data)
 

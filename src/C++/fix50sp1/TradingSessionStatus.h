@@ -116,6 +116,45 @@ namespace FIX50SP1
     FIELD_SET(*this, FIX::CPRegType);
     FIELD_SET(*this, FIX::DatedDate);
     FIELD_SET(*this, FIX::InterestAccrualDate);
+    FIELD_SET(*this, FIX::NoSecurityAltID);
+    class NoSecurityAltID: public FIX::Group
+    {
+    public:
+    NoSecurityAltID() : FIX::Group(454,455,FIX::message_order(455,456,0)) {}
+      FIELD_SET(*this, FIX::SecurityAltID);
+      FIELD_SET(*this, FIX::SecurityAltIDSource);
+    };
+    FIELD_SET(*this, FIX::SecurityXMLLen);
+    FIELD_SET(*this, FIX::SecurityXML);
+    FIELD_SET(*this, FIX::SecurityXMLSchema);
+    FIELD_SET(*this, FIX::NoEvents);
+    class NoEvents: public FIX::Group
+    {
+    public:
+    NoEvents() : FIX::Group(864,865,FIX::message_order(865,866,1145,867,868,0)) {}
+      FIELD_SET(*this, FIX::EventType);
+      FIELD_SET(*this, FIX::EventDate);
+      FIELD_SET(*this, FIX::EventTime);
+      FIELD_SET(*this, FIX::EventPx);
+      FIELD_SET(*this, FIX::EventText);
+    };
+    FIELD_SET(*this, FIX::NoInstrumentParties);
+    class NoInstrumentParties: public FIX::Group
+    {
+    public:
+    NoInstrumentParties() : FIX::Group(1018,1019,FIX::message_order(1019,1050,1051,1052,0)) {}
+      FIELD_SET(*this, FIX::InstrumentPartyID);
+      FIELD_SET(*this, FIX::InstrumentPartyIDSource);
+      FIELD_SET(*this, FIX::InstrumentPartyRole);
+      FIELD_SET(*this, FIX::NoInstrumentPartySubIDs);
+      class NoInstrumentPartySubIDs: public FIX::Group
+      {
+      public:
+      NoInstrumentPartySubIDs() : FIX::Group(1052,1053,FIX::message_order(1053,1054,0)) {}
+        FIELD_SET(*this, FIX::InstrumentPartySubID);
+        FIELD_SET(*this, FIX::InstrumentPartySubIDType);
+      };
+    };
   };
 
 }
